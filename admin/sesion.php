@@ -84,6 +84,9 @@ if($_POST["Entrar"]){
           <td height="30" align="center" bgcolor="#FFFFFF"  class="logo" style="color:white;"><a href="inicio.php" class="texto">Inicio</a></td>
         </tr>
         <tr>
+          <td height="30" align="center" bgcolor="#FFFFFF"  class="logo" style="color:white;"><a href="nosotros.php" class="texto">Nosotros</a></td>
+        </tr>
+        <tr>
           <td height="30" align="center" bgcolor="#FFFFFF"  class="logo" style="color:white;"><span class="texto"><span class="logo" style="color:white;"><a href="proyectos.php" class="texto">Proyectos</a></span></span></td>
         </tr>
         <tr>
