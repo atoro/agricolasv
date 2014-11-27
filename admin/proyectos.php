@@ -6,7 +6,7 @@ if ($_SESSION["$nusuario"] == "") {
 	
 include("../Conexion.php");
 	if ($_GET["action"]=="eliminar"){
-		$insertar = "delete from noticias WHERE id  = '$_GET[id]' " ; 
+		$insertar = "delete from proyectos WHERE id  = '$_GET[id]' " ; 
 		$sentencia=mysql_query($insertar,$conn)or die("Error al eliminar un link: ".mysql_error);
 	}
 	
@@ -103,8 +103,8 @@ body,td,th {
     <?php 
 if ($_POST["Grabar"]){
 	
-		$insertar="INSERT INTO noticias (titulo_noticia,breve_noticia,completo_noticia ) ";
-		$insertar.= "VALUES( '$_POST[titulo_noticia]','$_POST[breve_noticia]','$_POST[completo_noticia]')";
+		$insertar="INSERT INTO proyetos (titulo_proyecto,breve_proyecto,completo_proyecto ) ";
+		$insertar.= "VALUES( '$_POST[titulo_proyecto]','$_POST[breve_proyecto]','$_POST[completo_proyecto]')";
 		$sentencia=mysql_query($insertar,$conn)or die("Error al grabar: ".mysql_error);
 	
 }
@@ -112,26 +112,26 @@ if ($_POST["Grabar"]){
 ?>
     
 </p>
-<form action="noticias.php" method="post" name="form1" id="form1" onSubmit="MM_validateForm('codigo','','R','nombre','','R','preciolista','','RisNum','preciomayorista','','RisNum','descripcion','','R');return document.MM_returnValue">
+<form action="proyetos.php" method="post" name="form1" id="form1" onSubmit="MM_validateForm('codigo','','R','nombre','','R','preciolista','','RisNum','preciomayorista','','RisNum','descripcion','','R');return document.MM_returnValue">
   <table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
-        <td height="38" colspan="2"><div align="center" class="titulos"><strong>Destacados</strong></div></td>
+        <td height="38" colspan="2"><div align="center" class="titulos"><strong>Proyectos</strong></div></td>
       </tr>
       <tr>
         <td width="44%" height="32" align="right"><span class="titulos">Titulo : </span><strong class="texto"> &nbsp; </strong></td>
-        <td width="56%"><label for="titulo_noticia"></label>
-        <input type="text" name="titulo_noticia" id="titulo_noticia"></td>
+        <td width="56%"><label for="titulo_proyecto"></label>
+        <input type="text" name="titulo_proyecto" id="titulo_proyecto"></td>
       </tr>
       <tr>
         <td height="92" align="right" valign="top" class="Letras1"><span class="titulos">Contenido Breve : </span><span class="texto"><strong> &nbsp; </strong></span></td>
         <td><span class="textobox">
-          <textarea name="breve_noticia" cols="45" rows="5" class="Letras1" id="breve_noticia"></textarea>
+          <textarea name="breve_proyecto" cols="45" rows="5" class="Letras1" id="breve_proyecto"></textarea>
         </span></td>
       </tr>
       <tr>
         <td height="92" align="right" valign="top" class="Letras1"><span class="titulos">Contenido Completo :</span><span class="texto"><strong> &nbsp; </strong></span></td>
         <td><span class="textobox">
-          <textarea name="completo_noticia" cols="45" rows="5" class="Letras1" id="completo_noticia"></textarea>
+          <textarea name="completo_proyecto" cols="45" rows="5" class="Letras1" id="completo_proyecto"></textarea>
         </span></td>
       </tr>
       <tr>
@@ -150,7 +150,7 @@ if ($_POST["Grabar"]){
 <p><a href="sesion.php" class="texto">Volver</a></p>
 <p>
   <?php 
-$listado = "select * from noticias";
+$listado = "select * from proyectos";
 $sentencia = mysql_query($listado,$conn);
 while($rs=mysql_fetch_array($sentencia,$mibase)){
   ?>
@@ -161,43 +161,46 @@ while($rs=mysql_fetch_array($sentencia,$mibase)){
                 <tr>
                   <td width="88%" valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
                     <tr>
-                      <td height="31" class="Letras1"><a href="../imagenes/noticias/Upload_foto.php?id=<?php echo $rs["id"]; ?>" class="texto">Cambiar foto</a></td>
+                      <td height="31" class="Letras1"><a href="../imagenes/proyectos/Upload_foto.php?id=<?php echo $rs["id"]; ?>" class="texto">Cambiar foto</a></td>
                       <td class="Letras1"><div align="left" class="Letras1"> 
                       
 
-                      <span class="textobox"><a href="noticias.php?id=<?php echo $rs["id"] ?>&action=eliminar" onClick=" return confirm('Esta Seguro que desea eliminar?');"><img src="b_drop.png" width="16" height="16" border="0" /></a> &nbsp;</span><span class="texto">Eliminar</span></div></td>
-                      <td class="textobox"><a href="javascript:openWindow('editarnoticias.php?id=<?php echo $rs["id"]; ?>')"javascript:openWindow('editarnoticias.php?id=<?php echo $rs["id"]; ?>')""><img src="Lapiz.png" width="16" height="16" border="0"></a>  &nbsp;<span class="texto">Editar</span><span class="textoinfo"></a></span></td>
+                      <span class="textobox"><a href="proyetos.php?id=<?php echo $rs["id"] ?>&action=eliminar" onClick=" return confirm('Esta Seguro que desea eliminar?');"><img src="b_drop.png" width="16" height="16" border="0" /></a> &nbsp;</span><span class="texto">Eliminar</span></div></td>
+                      <td class="textobox"><a href="javascript:openWindow('editarproyectos.php?id=<?php echo $rs["id"]; ?>')"javascript:openWindow('editarproyectos.php?id=<?php echo $rs["id"]; ?>')""><img src="Lapiz.png" width="16" height="16" border="0"></a>  &nbsp;<span class="texto">Editar</span><span class="textoinfo"></a></span></td>
                     </tr>
                     <tr>
                       <td width="32%" rowspan="4" valign="top" class="Letras1">
-                      <img src="../imagenes/noticias/<?php echo $rs["id"]; ?>.jpg" width="200" height="200"></td>
+                      <img src="../imagenes/proyectos/<?php echo $rs["id"]; ?>.jpg" width="200" height="200"></td>
                       <td height="29" valign="top" class="Letras1"><div align="right" class="textoinfo"><span class="texto">Titulo :</span> &nbsp; </div></td>
                       <td valign="top">
-					  <span class="texto"><?php $texto = str_replace("\r\n","<br>",$rs["titulo_noticia"]); echo $texto ?>
+					  <span class="texto"><?php $texto = str_replace("\r\n","<br>",$rs["titulo_proyecto"]); echo $texto ?>
                       </span>
                       </td>
                     </tr>
                     <tr>
                       <td height="34" align="right" valign="top" class="Letras1"><span class="textoinfo"><span class="texto">Contenido Breve :</span> &nbsp; </span></td>
                       <td valign="top"><p class="texto">
-                        <?php $texto = str_replace("\r\n","<br>",$rs["breve_noticia"]); echo $texto ?>
+                        <?php $texto = str_replace("\r\n","<br>",$rs["breve_proyecto"]); echo $texto ?>
                       </p>
                       <p class="texto">&nbsp; </p></td>
                     </tr>
                     <tr>
                       <td width="14%" valign="top" class="Letras1"><div align="right" class="textoinfo"><span class="texto">Contenido Completo :</span> &nbsp;</div></td>
                       <td width="54%" valign="top"><span class="texto">
-                        <?php $texto = str_replace("\r\n","<br>",$rs["completo_noticia"]); echo $texto ?>
+                        <?php $texto = str_replace("\r\n","<br>",$rs["completo_proyecto"]); echo $texto ?>
                       </span></td>
                     </tr>
                     <tr>
                       <td colspan="2" align="right" valign="top" class="Letras1">&nbsp;</td>
                     </tr>
                     <tr>
-                      <td height="23" colspan="3" align="center" valign="middle" class="Letras1">
+                      <td height="23" colspan="3" align="center" valign="middle" class="Letras1">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td height="43" colspan="3" align="center" valign="middle" bgcolor="#414141" class="Letras1">
                       
                       
-                      <p class="titulos">&nbsp;</p>
+                      <p class="titulos2"><a href="galeria.php?propiedad=<?php echo $rs["id"]; ?>" class="titulos2">Galería Proyecto</a></p>
                       </td>
                     </tr>
                   </table></td>

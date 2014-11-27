@@ -5,13 +5,13 @@ if ($_SESSION["$nusuario"] == "") {
 } else {
 include("../Conexion.php");
 if ($_POST["Modificar"]){
-	$insertar = "UPDATE noticias SET titulo_noticia ='".$_POST["titulo_noticia"]."',breve_noticia ='".$_POST["breve_noticia"]."',completo_noticia ='".$_POST["completo_noticia"]."'   WHERE id  = '" .$_GET["id"]."' " ; 
+	$insertar = "UPDATE servicios SET titulo_servicio ='".$_POST["titulo_servicio"]."',contenido_servicio ='".$_POST["contenido_servicio"]."'   WHERE id  = '" .$_GET["id"]."' " ; 
 	$sentencia=mysql_query($insertar,$conn)or die("Error al grabar : ".mysql_error);
 
 
 ?>
 <script language="javascript">
-	window.opener.document.location="noticias.php"
+	window.opener.document.location="servicios.php"
 	window.close();
 	</script>	
 <?php } ?>
@@ -28,11 +28,11 @@ if ($_POST["Modificar"]){
 <body>
 
 <?php 
-$listado = "select * from  noticias where id ='$_GET[id]'";
+$listado = "select * from  servicios where id ='$_GET[id]'";
 $sentencia = mysql_query($listado,$conn);
 while($rs=mysql_fetch_array($sentencia,$mibase)){
 ?>
-<form action="editarnoticias.php?id=<?php echo $_GET["id"]; ?>" method="post" name="form1" id="form1">
+<form action="editarservicios.php?id=<?php echo $_GET["id"]; ?>" method="post" name="form1" id="form1">
   <table width="44%" border="0" align="left" cellpadding="0" cellspacing="0">
     <tr>
       <td width="81%" valign="top"><p>
@@ -43,18 +43,12 @@ while($rs=mysql_fetch_array($sentencia,$mibase)){
         <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
           <tr>
             <td width="31%" height="32" align="right" valign="top" class="textos"><span class="texto">Nombre:</span>&nbsp;</td>
-            <td width="69%" valign="top" class="Letras1"><input name="titulo_noticia" type="text" id="titulo_noticia" value="<?php echo $rs["titulo_noticia"]; ?>" /></td>
+            <td width="69%" valign="top" class="Letras1"><input name="titulo_servicio" type="text" id="titulo_servicio" value="<?php echo $rs["titulo_servicio"]; ?>" /></td>
           </tr>
           <tr>
             <td height="95" valign="top" class="textobox"><div align="right" class="titulo"><span class="textos"><span class="texto">Contenido</span>:&nbsp;</span></div></td>
             <td valign="top" class="Letras1"><span class="textobox">
-              <textarea name="breve_noticia" cols="40" rows="5" class="Letras1" id="contenido_pcurso"><?php echo $rs["breve_noticia"]; ?></textarea>
-            </span></td>
-          </tr>
-          <tr>
-            <td height="95" valign="top" class="textobox"><div align="right" class="titulo"><span class="textos"><span class="texto">Completo</span>:&nbsp;</span></div></td>
-            <td valign="top" class="Letras1"><span class="textobox">
-              <textarea name="completo_noticia" cols="40" rows="5" class="Letras1" id="contenido4"><?php echo $rs["completo_noticia"]; ?></textarea>
+              <textarea name="contenido_servicio" cols="40" rows="5" class="Letras1" id="contenido_pcurso"><?php echo $rs["contenido_servicio"]; ?></textarea>
             </span></td>
           </tr>
       </table></td>
