@@ -60,7 +60,7 @@ if ($_GET["fun"] =="eli"){
     </tr>
   </table>
 </form>
-<p align="center"><a href="ventayarriendo.php" class="texto">Volver</a></p>
+<p align="center"><a href="proyectos.php" class="texto">Volver</a></p>
 <table width="80%" border="0" align="center" cellpadding="0" cellspacing="0">
   <?php 
 $listado = "select * from  galeria where propiedad = '$_GET[propiedad]'";
