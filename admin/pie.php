@@ -5,7 +5,7 @@ if ($_SESSION["$nusuario"] == "") {
 } else {
 include("../Conexion.php");
 if ($_POST["Grabar"]){
-	$editar="update  pie set correo  = '$_POST[correo]',telefono  = '$_POST[telefono]'
+	$editar="update  pie set texto_pie1  = '$_POST[texto_pie1]',texto_pie2  = '$_POST[texto_pie2]'
 	";
 	$sentencia = mysql_query($editar,$conn)or die("Error al grabar: ".mysql_error);
 }
@@ -69,8 +69,8 @@ body,td,th {
 	$listado = "select * from pie";
 	$sentencia = mysql_query($listado,$conn);
 	while($rs=mysql_fetch_array($sentencia,$mibase)){
-		$correo = $rs["correo"];
-		$telefono = $rs["telefono"];
+		$texto_pie1 = $rs["texto_pie1"];
+		$texto_pie2 = $rs["texto_pie2"];
 	}
 	?>
   <form action="pie.php" method="post" name="form1" id="form1">
@@ -84,16 +84,16 @@ body,td,th {
         <td height="17" colspan="3"></td>
       </tr>
       <tr>
-        <td width="29%" height="30" align="right" valign="top" class="texto"><p>Correo: &nbsp;</p></td>
-        <td width="65%" valign="top"><input name="correo" type="text" class="textopreguntas" id="correo" value="<?php echo $correo; ?> " size="50"></td>
+        <td width="29%" height="30" align="right" valign="top" class="texto"><p>Texto 1: &nbsp;</p></td>
+        <td width="65%" valign="top"><input name="texto_pie1" type="text" class="textopreguntas" id="texto_pie1" value="<?php echo $texto_pie1; ?> " size="50"></td>
         <td width="6%">&nbsp;</td>
       </tr>
       <tr>
         <td height="17" colspan="3"></td>
       </tr>
       <tr>
-        <td height="30" align="right" valign="top" class="texto"><p>Teléfono: &nbsp;</p></td>
-        <td valign="top"><input name="telefono" type="text" class="textopreguntas" id="titulo_inicio4" value="<?php echo $telefono; ?> " size="50"></td>
+        <td height="30" align="right" valign="top" class="texto"><p>Texto 2: &nbsp;</p></td>
+        <td valign="top"><input name="texto_pie2" type="text" class="textopreguntas" id="titulo_inicio4" value="<?php echo $texto_pie2; ?> " size="50"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>

@@ -5,7 +5,7 @@ if ($_SESSION["$nusuario"] == "") {
 } else {
 include("../Conexion.php");
 if ($_POST["Grabar"]){
-	$editar="update  slide set slide1  = '$_POST[slide1]',texto_slide1  = '$_POST[texto_slide1]',slide2  = '$_POST[slide2]',texto_slide2  = '$_POST[texto_slide2]',slide3  = '$_POST[slide3]',texto_slide3  = '$_POST[texto_slide3]'
+	$editar="update  slide set slide1  = '$_POST[slide1]',texto_slide1  = '$_POST[texto_slide1]',slide2  = '$_POST[slide2]',texto_slide2  = '$_POST[texto_slide2]',slide3  = '$_POST[slide3]',texto_slide3  = '$_POST[texto_slide3]',slide4  = '$_POST[slide4]',texto_slide4  = '$_POST[texto_slide4]'
 	";
 	$sentencia = mysql_query($editar,$conn)or die("Error al grabar: ".mysql_error);
 }
@@ -75,6 +75,8 @@ body,td,th {
 		$texto_slide2 = $rs["texto_slide2"];
 		$slide3 = $rs["slide3"];
 		$texto_slide3 = $rs["texto_slide3"];
+		$slide4 = $rs["slide4"];
+		$texto_slide4 = $rs["texto_slide4"];
 	}
 	?>
   <form action="slide.php" method="post" name="form1" id="form1">
@@ -88,18 +90,18 @@ body,td,th {
         <td height="17" colspan="3"></td>
       </tr>
       <tr>
-        <td height="30" align="right" valign="top" class="texto"><p>slide 1 : &nbsp;</p></td>
+        <td height="30" align="right" valign="top" class="texto"><p>Slide 1 : &nbsp;</p></td>
         <td valign="top"><input name="slide1" type="text" class="textopreguntas" id="titulo_tasaciones5" value="<?php echo $slide1; ?> " size="50"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td width="29%" height="30" align="right" valign="top" class="texto"><p>texto slide 1 : &nbsp;</p></td>
-        <td width="65%" valign="top"><input name="texto_slide1" type="text" class="textopreguntas" id="texto_slide1" value="<?php echo $texto_slide1; ?> " size="50"></td>
+        <td width="29%" height="92" align="right" valign="top" class="texto"><p>Texto slide 1 : &nbsp;</p></td>
+        <td width="65%" valign="top"><textarea name="texto_slide1" cols="50" rows="4" class="textopreguntas" id="texto_slide1"><?php echo $texto_slide1; ?> </textarea></td>
         <td width="6%">&nbsp;</td>
       </tr>
       <tr>
         <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/slide/Upload_foto.php?id=1" class="texto">Cambiar Imagen :</a> &nbsp;</p></td>
-        <td valign="top"><img src="../imagenes/slide/1.jpg" width="400" height="200"></td>
+        <td valign="top"><img src="../imagenes/slide/1.jpg" width="500" height="200"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
@@ -107,36 +109,51 @@ body,td,th {
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td height="30" align="right" valign="top" class="texto"><p>slide 2 : &nbsp;</p></td>
+        <td height="30" align="right" valign="top" class="texto"><p>Slide 2 : &nbsp;</p></td>
         <td valign="top"><input name="slide2" type="text" class="textopreguntas" id="titulo_tasaciones6" value="<?php echo $slide2; ?> " size="50"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td height="30" align="right" valign="top" class="texto"><p>texto slide 2 : &nbsp;</p></td>
-        <td valign="top"><input name="texto_slide2" type="text" class="textopreguntas" id="texto_slide2" value="<?php echo $texto_slide2; ?> " size="50"></td>
+        <td height="100" align="right" valign="top" class="texto"><p>Texto slide 2 : &nbsp;</p></td>
+        <td valign="top"><textarea name="texto_slide2" cols="50" rows="4" class="textopreguntas" id="texto_slide2"><?php echo $texto_slide2; ?> </textarea></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/slide/Upload_foto.php?id=2" class="texto">Cambiar Imagen : </a>&nbsp;</p></td>
-        <td valign="top"><img src="../imagenes/slide/2.jpg" width="400" height="200"></td>
+        <td valign="top"><img src="../imagenes/slide/2.jpg" width="500" height="200"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td height="63" colspan="3">&nbsp;</td>
       </tr>
       <tr>
-        <td height="30" align="right" valign="top" class="texto"><p>slide 3 : &nbsp;</p></td>
-        <td valign="top"><input name="slide3" type="text" class="textopreguntas" id="titulo_tasaciones7" value="<?php echo $slide3; ?> " size="50"></td>
+        <td height="30" align="right" valign="top" class="texto"><p>Slide 3 : &nbsp;</p></td>
+        <td valign="top"><input name="slide3" type="text" class="textopreguntas" id="titulo_tasaciones2" value="<?php echo $slide3; ?> " size="50"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td height="30" align="right" valign="top" class="texto"><p>texto slide 3 : &nbsp;</p></td>
-        <td valign="top"><input name="texto_slide3" type="text" class="textopreguntas" id="titulo_tasaciones4" value="<?php echo $texto_slide3; ?> " size="50"></td>
+        <td height="94" align="right" valign="top" class="texto"><p>Texto slide 3 : &nbsp;</p></td>
+        <td valign="top"><textarea name="texto_slide3" cols="50" rows="4" class="textopreguntas" id="texto_slide3"><?php echo $texto_slide3; ?> </textarea></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="246" align="right" valign="top" class="texto"><p><a href="../imagenes/slide/Upload_foto.php?id=3" class="texto">Cambiar Imagen :</a> &nbsp;</p></td>
+        <td valign="top"><img src="../imagenes/slide/3.jpg" width="500" height="200"></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="30" align="right" valign="top" class="texto"><p>Slide 4 : &nbsp;</p></td>
+        <td valign="top"><input name="slide4" type="text" class="textopreguntas" id="titulo_tasaciones7" value="<?php echo $slide4; ?> " size="50"></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="99" align="right" valign="top" class="texto"><p>Texto slide 4 : &nbsp;</p></td>
+        <td valign="top"><textarea name="texto_slide4" cols="50" rows="4" class="textopreguntas" id="titulo_tasaciones4"><?php echo $texto_slide4; ?> </textarea></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/slide/Upload_foto.php?id=3" class="texto">Cambiar Imagen :</a> &nbsp;</p></td>
-        <td valign="top"><img src="../imagenes/slide/3.jpg" width="400" height="200"></td>
+        <td valign="top"><img src="../imagenes/slide/4.jpg" width="500" height="200"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>

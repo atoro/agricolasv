@@ -115,21 +115,21 @@ if ($_POST["Grabar"]){
 <form action="noticias.php" method="post" name="form1" id="form1" onSubmit="MM_validateForm('codigo','','R','nombre','','R','preciolista','','RisNum','preciomayorista','','RisNum','descripcion','','R');return document.MM_returnValue">
   <table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
-        <td height="38" colspan="2"><div align="center" class="titulos"><strong>Noticias</strong></div></td>
+        <td height="38" colspan="2"><div align="center" class="titulos"><strong>Destacados</strong></div></td>
       </tr>
       <tr>
-        <td width="44%" height="32" align="right"><span class="titulos">Titulo</span><strong class="texto"> &nbsp; </strong></td>
+        <td width="44%" height="32" align="right"><span class="titulos">Titulo : </span><strong class="texto"> &nbsp; </strong></td>
         <td width="56%"><label for="titulo_noticia"></label>
         <input type="text" name="titulo_noticia" id="titulo_noticia"></td>
       </tr>
       <tr>
-        <td height="92" align="right" valign="top" class="Letras1"><span class="titulos">Contenido</span><span class="texto"><strong> &nbsp; </strong></span></td>
+        <td height="92" align="right" valign="top" class="Letras1"><span class="titulos">Contenido Breve : </span><span class="texto"><strong> &nbsp; </strong></span></td>
         <td><span class="textobox">
           <textarea name="breve_noticia" cols="45" rows="5" class="Letras1" id="breve_noticia"></textarea>
         </span></td>
       </tr>
       <tr>
-        <td height="92" align="right" valign="top" class="Letras1"><span class="titulos">Contenido Completo</span><span class="texto"><strong> &nbsp; </strong></span></td>
+        <td height="92" align="right" valign="top" class="Letras1"><span class="titulos">Contenido Completo :</span><span class="texto"><strong> &nbsp; </strong></span></td>
         <td><span class="textobox">
           <textarea name="completo_noticia" cols="45" rows="5" class="Letras1" id="completo_noticia"></textarea>
         </span></td>
@@ -171,21 +171,21 @@ while($rs=mysql_fetch_array($sentencia,$mibase)){
                     <tr>
                       <td width="32%" rowspan="4" valign="top" class="Letras1">
                       <img src="../imagenes/noticias/<?php echo $rs["id"]; ?>.jpg" width="200" height="200"></td>
-                      <td height="29" valign="top" class="Letras1"><div align="right" class="textoinfo"><span class="texto">Titulo:</span> &nbsp; </div></td>
+                      <td height="29" valign="top" class="Letras1"><div align="right" class="textoinfo"><span class="texto">Titulo :</span> &nbsp; </div></td>
                       <td valign="top">
 					  <span class="texto"><?php $texto = str_replace("\r\n","<br>",$rs["titulo_noticia"]); echo $texto ?>
                       </span>
                       </td>
                     </tr>
                     <tr>
-                      <td height="34" align="right" valign="top" class="Letras1"><span class="textoinfo"><span class="texto">Contenido:</span> &nbsp; </span></td>
+                      <td height="34" align="right" valign="top" class="Letras1"><span class="textoinfo"><span class="texto">Contenido Breve :</span> &nbsp; </span></td>
                       <td valign="top"><p class="texto">
                         <?php $texto = str_replace("\r\n","<br>",$rs["breve_noticia"]); echo $texto ?>
                       </p>
                       <p class="texto">&nbsp; </p></td>
                     </tr>
                     <tr>
-                      <td width="14%" valign="top" class="Letras1"><div align="right" class="textoinfo"><span class="texto">C. Completo:</span> &nbsp;</div></td>
+                      <td width="14%" valign="top" class="Letras1"><div align="right" class="textoinfo"><span class="texto">Contenido Completo :</span> &nbsp;</div></td>
                       <td width="54%" valign="top"><span class="texto">
                         <?php $texto = str_replace("\r\n","<br>",$rs["completo_noticia"]); echo $texto ?>
                       </span></td>

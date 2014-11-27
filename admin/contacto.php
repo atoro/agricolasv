@@ -5,7 +5,7 @@ if ($_SESSION["$nusuario"] == "") {
 } else {
 include("../Conexion.php");
 if ($_POST["Grabar"]){
-	$editar="update  tasaciones set titulo_tasaciones  = '$_POST[titulo_tasaciones]',contenido_tasaciones  = '$_POST[contenido_tasaciones]'
+	$editar="update  contacto set titulo_contacto  = '$_POST[titulo_contacto]',contenido_contacto  = '$_POST[contenido_contacto]'
 	";
 	$sentencia = mysql_query($editar,$conn)or die("Error al grabar: ".mysql_error);
 }
@@ -66,36 +66,31 @@ body,td,th {
 
 <body>
   <?php
-	$listado = "select * from tasaciones";
+	$listado = "select * from contacto";
 	$sentencia = mysql_query($listado,$conn);
 	while($rs=mysql_fetch_array($sentencia,$mibase)){
-		$titulo_tasaciones = $rs["titulo_tasaciones"];
-		$contenido_tasaciones = $rs["contenido_tasaciones"];
+		$titulo_contacto = $rs["titulo_contacto"];
+		$contenido_contacto = $rs["contenido_contacto"];
 	}
 	?>
-  <form action="tasaciones.php" method="post" name="form1" id="form1">
+  <form action="contacto.php" method="post" name="form1" id="form1">
     
     <table width="45%" border="0" align="center" cellpadding="0" cellspacing="0">
       
       <tr>
-        <td colspan="3"><div align="center" class="titulos"><strong>Tasaciones</strong></div></td>
+        <td colspan="3"><div align="center" class="titulos"><strong>Contacto</strong></div></td>
       </tr>
       <tr>
         <td height="17" colspan="3"></td>
       </tr>
       <tr>
         <td width="29%" height="30" align="right" valign="top" class="texto"><p>Titulo : &nbsp;</p></td>
-        <td width="65%" valign="top"><input name="titulo_tasaciones" type="text" class="textopreguntas" id="titulo_tasaciones" value="<?php echo $titulo_tasaciones; ?> " size="50"></td>
+        <td width="65%" valign="top"><input name="titulo_contacto" type="text" class="textopreguntas" id="titulo_contacto" value="<?php echo $titulo_contacto; ?> " size="50"></td>
         <td width="6%">&nbsp;</td>
       </tr>
       <tr>
         <td height="94" align="right" valign="top" class="texto"><p>Contenido : &nbsp;</p></td>
-        <td valign="top"><textarea name="contenido_tasaciones" id="nosotros5" cols="50" rows="5"><?php echo $contenido_tasaciones; ?> </textarea></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/tasaciones/Upload_foto.php?id=1" class="texto">Cambiar Imagen:</a>&nbsp;</p></td>
-        <td valign="top"><img src="../imagenes/tasaciones/1.jpg" width="300" height="300"></td>
+        <td valign="top"><textarea name="contenido_contacto" id="nosotros5" cols="50" rows="5"><?php echo $contenido_contacto; ?> </textarea></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
