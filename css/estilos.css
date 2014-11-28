@@ -1,0 +1,20 @@
+::selection {
+    background-color: #008aff;
+    color: white;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+	color: #585551;
+}
+header .centro_header .logo { 
+    margin-left: 5%;
+}
+.contacto {
+	color: white;
+	background: #d5ac1e;
+}
+.contacto .centro_contacto {
+	margin: auto;
+	padding: 40px 0;
+	width: 90%;
+}

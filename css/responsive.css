@@ -1,0 +1,89 @@
+@media only screen and (min-width: 768px) {
+
+    header {
+        background-color: #f8f6f6;
+        height: 120px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 2;
+        position: static;
+    }   
+    header .centro_header {
+        margin: auto;
+        width: 90%;
+    }
+    header .centro_header .logo { 
+        margin-left: 0;
+    }
+    header #menu ul {
+        font-size: 14px;
+        list-style: none;
+    }
+    header #menu ul li{
+        margin: -5px 7px 0 7px;
+    }  
+    header #menu ul li a {
+        font-size: 14px;
+        color: #585551;
+        padding: 0 10px;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+    header #menu ul li a:hover {
+        background-color: #d5ac1e;
+        border-radius: 5px;
+        color: #fff;
+        padding: 8px 10px;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+    .contacto .centro_contacto {
+        width: 90%;
+        margin: auto;
+    }
+
+}
+
+@media only screen and (min-width: 1250px) {
+
+    header .centro_header {
+        margin: auto;
+        width: 1170px;
+    }
+    header #menu ul {
+        font-size: 14px;
+        list-style: none;
+    }
+    header #menu ul li{
+        margin: -5px 7px 0 7px;
+    }  
+    header #menu ul li a {
+        font-size: 16px;
+        color: #585551;
+        padding: 0 10px;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+    header #menu ul li a:hover {
+        background-color: #d5ac1e;
+        border-radius: 5px;
+        color: #fff;
+        padding: 8px 10px;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+    .contacto .centro_contacto {
+        margin: auto;
+        width: 1170px;
+    }
+
+}

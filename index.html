@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>AIT SV Ltda</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="css/menu.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="imagenes/icon.png">
+</head>
+
+<body>
+<header>
+  <div class="centro_header">
+    <figure class="logo">
+      <a href="index.php">
+        <img src="imagenes/logo.jpg" alt="Logo AIT SV Ltda">
+      </a>
+    </figure>
+    <nav id="menu">
+      <a href="#" class="nav-mobile" id="nav-mobile"></a>
+      <ul>
+        <li><a href="index.php">Inicio</a></li>
+        <li><a href="nosotros.php">Proyecto</a></li>
+        <li><a href="noticias.php">Servicios</a></li>
+        <li><a href="ubicacion.php">Destacados</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="contacto">
+  <div class="centro_contacto">
+    <figure class="carta">
+      <img src="imagenes/carta.png" alt="icono carta">
+    </figure>
+    contacto
+  </div>
+</section>
+
+<!-- scripts -->
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script>
+  $(function() {
+      var btn_movil = $('#nav-mobile'),
+          menu = $('#menu').find('ul');
+      btn_movil.on('click', function (e) {
+          e.preventDefault();
+          var el = $(this);
+          el.toggleClass('nav-active');
+          menu.toggleClass('open-menu');
+      })
+  });
+</script>
+</body>
+</html>
