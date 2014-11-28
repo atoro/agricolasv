@@ -24,15 +24,26 @@
         margin: -5px 7px 0 7px;
     }  
     header #menu ul li a {
-        font-size: 14px;
+        font-size: 15px;
         color: #585551;
         padding: 0 10px;
+        font-weight: 500;
         -webkit-transition: all 0.2s linear;
         -moz-transition: all 0.2s linear;
         -o-transition: all 0.2s linear;
         transition: all 0.2s linear;
     }
     header #menu ul li a:hover {
+        background-color: #d5ac1e;
+        border-radius: 5px;
+        color: #fff;
+        padding: 8px 10px;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+    header #menu ul li .activo {
         background-color: #d5ac1e;
         border-radius: 5px;
         color: #fff;
