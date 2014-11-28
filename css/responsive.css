@@ -46,6 +46,16 @@
         width: 90%;
         margin: auto;
     }
+    .contacto .centro_contacto form {
+        display: inline-block;
+        border: dashed 1px red;
+    }
+    .contacto .centro_contacto h3 {
+        display: none;
+    }
+    .contacto .centro_contacto .texto_contacto {
+        display: block;
+    }
 
 }
 
