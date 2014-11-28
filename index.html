@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
   <link rel="stylesheet" type="text/css" href="css/menu.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
   <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="imagenes/icon.png">
 </head>
@@ -34,9 +35,48 @@
   </div>
 </header>
 
-<section class="slide">
-  slide
-</section>
+<div id="w">
+    <div class="slider">
+      <ul class="slides">
+        <li class="slide">
+          <figure>
+            <figcaption>
+              <h1>Hola</h1>
+              <a href="capacitaciones.php">capacitaciones</a>
+            </figcaption>
+            <img src="imagenes/img/1.jpg" alt="dribbble witches">
+          </figure>
+        </li>
+        <li class="slide">
+          <figure>
+            <figcaption>
+              <h1>Hola</h1>
+              <a href="capacitaciones.php">capacitaciones</a>
+            </figcaption>
+            <img src="imagenes/img/2.jpg" alt="searing mountain illustration">
+          </figure>
+        </li>
+        <li class="slide">
+          <figure>
+            <figcaption>
+              <h1>Hola</h1>
+              <a href="capacitaciones.php">capacitaciones</a>
+            </figcaption>
+            <img src="imagenes/img/3.jpg" alt="taipei fireworks">
+          </figure>
+        </li>
+        <li class="slide">
+          <figure>
+            <figcaption>
+              <h1>Hola</h1>
+              <a href="capacitaciones.php">capacitaciones</a>
+            </figcaption>
+            <img src="imagenes/img/4.jpg" alt="coffee cup iphone newspaper">
+          </figure>
+        </li>
+      </ul>
+    </div><!-- @end .slider -->
+  </div><!-- @end #w -->
 
 <section class="contenido">
   contenido
@@ -86,6 +126,17 @@
           menu.toggleClass('open-menu');
       })
   });
+</script>
+<script type="text/javascript" src="js/jquery.glide.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  $('.slider').glide({
+    autoplay: 3500,
+    hoverpause: true, // set to false for nonstop rotate
+    arrowRightText: '&rarr;',
+    arrowLeftText: '&larr;'
+  });
+});
 </script>
 </body>
 </html>
