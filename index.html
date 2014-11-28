@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
   <link rel="stylesheet" type="text/css" href="css/menu.css">
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="imagenes/icon.png">
 </head>
 
@@ -39,7 +39,14 @@
     <figure class="carta">
       <img src="imagenes/carta.png" alt="icono carta">
     </figure>
-    contacto
+    <h3>CONTACTO</h3>
+    <form action="contacto.php" method="post" onSubmit="MM_validateForm('name','','R','message','','R');return document.MM_returnValue;return document.MM_returnValue">
+      <input class="input" name="Nombre" type="text" placeholder="Nombre"/>
+      <input class="input" name="Mail" type="text" placeholder="E-mail"/>  
+      <input class="input" name="Telefono" type="text" placeholder="Teléfono"/>
+      <textarea name="Mensaje" id="Mensaje" class="mensaje" placeholder="Mensaje"></textarea>
+      <input class="enviar" name="Enviar" type="submit" value="Enviar"/>
+    </form>
   </div>
 </section>
 

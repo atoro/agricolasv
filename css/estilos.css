@@ -2,6 +2,18 @@
     background-color: #008aff;
     color: white;
 }
+::-webkit-input-placeholder {
+color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+color: #fff; 
+}
+:-ms-input-placeholder { 
+color: #fff; 
+}
 body {
 	font-family: 'Raleway', sans-serif;
 	color: #585551;
@@ -17,4 +29,72 @@ header .centro_header .logo {
 	margin: auto;
 	padding: 40px 0;
 	width: 90%;
+}
+.contacto .centro_contacto .carta {
+	width: 30px;
+	margin: 0 auto;
+}
+.contacto .centro_contacto .carta img {
+	width: 100%;
+}
+.contacto .centro_contacto form .enviar {
+	border: none;
+	background: white;
+	color: #d5ac1e;
+	border-radius: 5px;
+	padding: 10px 5%;
+	-webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+.contacto .centro_contacto form .enviar:focus { 
+	border-color: none;
+    outline: none;
+}
+.contacto .centro_contacto form .input {
+	width: 90%;
+	margin-bottom: 17px;
+	border-radius: 5px;
+	padding: 10px 5%;
+	background: #d5ac1e;
+	border: solid 2px white;
+	-webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+.contacto .centro_contacto form .input:focus,
+.contacto .centro_contacto form .mensaje:focus {
+    border-color: none;
+    outline: none;
+    background: white;
+    color: #d5ac1e;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+.contacto .centro_contacto form .mensaje {
+	width: 90%;
+	margin-bottom: 17px;
+	border-radius: 5px;
+	color: white;
+	padding: 10px 5%;
+	background: #d5ac1e;
+	border: solid 2px white;
+	-webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+.contacto .centro_contacto h3 { 
+	text-align: center;
+	margin: 20px 0;
+	font-size: 25px;
+	font-weight: 300;
 }
