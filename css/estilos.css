@@ -82,11 +82,6 @@ header .centro_header .logo {
 	color: #d5ac1e;
 	border-radius: 5px;
 	padding: 10px 5%;
-	-webkit-transition: all 0.5s ease-in;
-    -moz-transition: all 0.5s ease-in;
-    -ms-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in;
 }
 .contacto .centro_contacto form .enviar:focus { 
 	border-color: none;
