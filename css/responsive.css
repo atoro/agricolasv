@@ -86,6 +86,20 @@
         font-weight: 300;
         line-height: 23px;
     }
+    .contenido_nosotros .centro_nosotros .img_nosotros {
+        display: inline-block;
+        width: 35%;
+        vertical-align: top;
+    }
+    .contenido_nosotros .centro_nosotros .img_nosotros img {
+        width: 100%;
+    }
+    .contenido_nosotros .centro_nosotros .texto { 
+        display: inline-block;
+        vertical-align: top;
+        width: 60%;
+        margin-left: 4%;
+    }
 }
 
 @media only screen and (min-width: 1250px) {
@@ -123,6 +137,13 @@
     .contacto .centro_contacto {
         margin: auto;
         width: 1170px;
+    }
+    .contenido_nosotros .centro_nosotros { 
+        margin: auto;
+        width: 1170px;
+    }
+    .contenido_nosotros .centro_nosotros .texto { 
+        margin-left: 52px;
     }
 
 }
