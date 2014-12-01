@@ -157,5 +157,96 @@ header .centro_header .logo {
 .contacto .centro_contacto .texto_contacto {
 	display: none;
 }
+.destacados {
+	background: #fff;
+}
+.destacados .centro_destacados {
+	width: 90%;
+	margin: 0 auto;
+	padding: 40px 0; 
+}
+.destacados .centro_destacados .grid1 { 
+	margin-bottom: 30px;
+}
+.destacados .centro_destacados .grid1 .img_destacado {
+	position: relative;
+}
+.destacados .centro_destacados .grid1 .img_destacado h2 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 35%;
+	font-size: 30px;
+	font-weight: 300;
+	color: white;
+	text-align: center;
+	text-shadow: 0 1px 1px #000000;
+}
+.destacados .centro_destacados .grid1 .img_destacado img { 
+	width: 100%;
+}
+.destacados .centro_destacados .grid1 p { 
+	text-align: center;
+	color: #585551;
+	line-height: 22px;
+}
+.destacados .centro_destacados .grid2 { 
+	margin-bottom: 30px;
+}
+.destacados .centro_destacados .grid2 .img_destacado {
+	position: relative;
+}
+.destacados .centro_destacados .grid2 .img_destacado h2 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 35%;
+	font-size: 30px;
+	font-weight: 300;
+	color: white;
+	text-align: center;
+	text-shadow: 0 1px 1px #000000;
+}
+.destacados .centro_destacados .grid2 .img_destacado img { 
+	width: 100%;
+}
+.destacados .centro_destacados .grid2 p { 
+	text-align: center;
+	color: #585551;
+	line-height: 22px;
+}
+.destacados .centro_destacados .grid3 .img_destacado {
+	position: relative;
+}
+.destacados .centro_destacados .grid3 .img_destacado h2 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 35%;
+	font-size: 30px;
+	font-weight: 300;
+	color: white;
+	text-align: center;
+	text-shadow: 0 1px 1px #000000;
+}
+.destacados .centro_destacados .grid3 .img_destacado img { 
+	width: 100%;
+}
+.destacados .centro_destacados .grid3 p { 
+	text-align: center;
+	color: #585551;
+	line-height: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 

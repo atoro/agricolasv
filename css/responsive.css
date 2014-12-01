@@ -100,6 +100,26 @@
         width: 60%;
         margin-left: 4%;
     }
+    .destacados .centro_destacados .grid1 { 
+        display: inline-block;
+        vertical-align: top;
+        width: 31%; 
+        margin-bottom: 0;
+        margin-right: 2%;
+    }
+    .destacados .centro_destacados .grid2 { 
+        display: inline-block;
+        vertical-align: top;
+        width: 31%; 
+        margin-bottom: 0;
+        margin-right: 2%;
+    }
+    .destacados .centro_destacados .grid3 { 
+        display: inline-block;
+        vertical-align: top;
+        width: 31%; 
+        margin-bottom: 0;
+    }
 }
 
 @media only screen and (min-width: 1250px) {
@@ -144,6 +164,18 @@
     }
     .contenido_nosotros .centro_nosotros .texto { 
         margin-left: 52px;
+    }
+    .destacados .centro_destacados {
+        margin: auto;
+        width: 1170px;
+    }
+    .destacados .centro_destacados .grid1 { 
+        
+        margin-right: 3%;
+    }
+    .destacados .centro_destacados .grid2 { 
+       
+        margin-right: 3%;
     }
 
 }
