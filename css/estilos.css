@@ -79,35 +79,35 @@ header .centro_header .logo {
 	font-weight: 300;
 	line-height: 22px;
 }
-.contacto {
+#contacto {
 	color: white;
 	background: #d5ac1e;
 	margin-bottom: 210px;
 }
-.contacto .centro_contacto {
+#contacto .centro_contacto {
 	margin: auto;
 	padding: 40px 0;
 	width: 90%;
 }
-.contacto .centro_contacto .carta {
+#contacto .centro_contacto .carta {
 	width: 30px;
 	margin: 0 auto;
 }
-.contacto .centro_contacto .carta img {
+#contacto .centro_contacto .carta img {
 	width: 100%;
 }
-.contacto .centro_contacto form .enviar {
+#contacto .centro_contacto form .enviar {
 	border: none;
 	background: white;
 	color: #d5ac1e;
 	border-radius: 5px;
 	padding: 10px 5%;
 }
-.contacto .centro_contacto form .enviar:focus { 
+#contacto .centro_contacto form .enviar:focus { 
 	border-color: none;
     outline: none;
 }
-.contacto .centro_contacto form .input {
+#contacto .centro_contacto form .input {
 	width: 90%;
 	color: white;
 	margin-bottom: 17px;
@@ -121,8 +121,8 @@ header .centro_header .logo {
     -o-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
 }
-.contacto .centro_contacto form .input:focus,
-.contacto .centro_contacto form .mensaje:focus {
+#contacto .centro_contacto form .input:focus,
+#contacto .centro_contacto form .mensaje:focus {
     border-color: none;
     outline: none;
     background: white;
@@ -133,7 +133,7 @@ header .centro_header .logo {
     -o-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
 }
-.contacto .centro_contacto form .mensaje {
+#contacto .centro_contacto form .mensaje {
 	width: 90%;
 	margin-bottom: 17px;
 	border-radius: 5px;
@@ -148,13 +148,13 @@ header .centro_header .logo {
     -o-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
 }
-.contacto .centro_contacto h3 { 
+#contacto .centro_contacto h3 { 
 	text-align: center;
 	margin: 20px 0;
 	font-size: 25px;
 	font-weight: 300;
 }
-.contacto .centro_contacto .texto_contacto {
+#contacto .centro_contacto .texto_contacto {
 	display: none;
 }
 .destacados {

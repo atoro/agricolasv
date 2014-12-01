@@ -53,35 +53,35 @@
         -o-transition: all 0.2s linear;
         transition: all 0.2s linear;
     }
-    .contacto {
+    #contacto {
         min-height: 530px;
     }
-    .contacto .centro_contacto {
+    #contacto .centro_contacto {
         width: 90%;
         margin: auto;
     }
-    .contacto .centro_contacto form {
+    #contacto .centro_contacto form {
         display: inline-block;
         width: 60%;
         vertical-align: top;
         float: right;
         margin-top: 30px;
     }
-    .contacto .centro_contacto h3 {
+    #contacto .centro_contacto h3 {
         display: none;
     }
-    .contacto .centro_contacto .texto_contacto {
+    #contacto .centro_contacto .texto_contacto {
         display: inline-block;
         width: 35%;
         vertical-align: top;
         float: left;
     }
-    .contacto .centro_contacto .texto_contacto h4 { 
+    #contacto .centro_contacto .texto_contacto h4 { 
         margin: 30px 0 0 0;
         font-size: 25px;
         font-weight: 300;
     }
-    .contacto .centro_contacto .texto_contacto p { 
+    #contacto .centro_contacto .texto_contacto p { 
         font-size: 16px;
         font-weight: 300;
         line-height: 23px;
@@ -154,7 +154,7 @@
         -o-transition: all 0.2s linear;
         transition: all 0.2s linear;
     }
-    .contacto .centro_contacto {
+    #contacto .centro_contacto {
         margin: auto;
         width: 1170px;
     }

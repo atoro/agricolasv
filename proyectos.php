@@ -25,11 +25,11 @@
     <nav id="menu">
       <a href="#" class="nav-mobile" id="nav-mobile"></a>
       <ul>
-        <li><a class="activo" href="index.php">Inicio</a></li>
-        <li><a href="nosotros.php">Proyecto</a></li>
-        <li><a href="noticias.php">Servicios</a></li>
-        <li><a href="ubicacion.php">Destacados</a></li>
-        <li><a href=".contacto">Contacto</a></li>
+        <li><a href="index.php">Inicio</a></li>
+        <li><a class="activo" href="proyectos.php">Proyectos</a></li>
+        <li><a href="servicios.php">Servicios</a></li>
+        <li><a href="destacados.php">Destacados</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </div>
@@ -132,7 +132,7 @@
   </div>
 </section>
 
-<section class="contacto">
+<section id="contacto">
   <div class="centro_contacto">
     <figure class="carta">
       <img src="imagenes/carta.png" alt="icono carta">
@@ -191,17 +191,34 @@ $(function(){
 });
 </script>
 
-<!-- script anclas-->
+<!-- scrip ancla -->
 <script type="text/javascript">
-$(function(){
-    $('ul li a').on('click',function(e){
-        e.preventDefault();
-        var strAncla=$(this).attr('href');
-        $('body,html').stop(true,true).animate({
-            scrollTop: $(strAncla).offset().top
-        },1000);
-    });
+  $(function(){
+
+     $('a[href*=#]').click(function() {
+
+     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+
+             var $target = $(this.hash);
+
+             $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+
+             if ($target.length) {
+
+                 var targetOffset = $target.offset().top;
+
+                 $('html,body').animate({scrollTop: targetOffset}, 1000);
+
+                 return false;
+
+            }
+
+       }
+
+   });
+
 });
-</script>
+</script> 
 </body>
 </html>
