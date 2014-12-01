@@ -16,6 +16,7 @@ img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 .slider {
 	position: relative;
@@ -25,6 +26,7 @@ img {
 .slides {
   height: 100%;
   overflow: hidden;
+  
 }
 .slide {
   height: 100%;
@@ -102,15 +104,23 @@ img {
   display: none;
 }
 
-@media screen and (max-width: 600px) {  
+@media screen and (min-width: 300px) {  
   
-  .slide figure figcaption a,
-  .slide figure figcaption h2,
-  .slide figure figcaption p { 
+  .slide figure figcaption h2 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+}
+@media screen and (max-width: 600px) {  
+
+  .slide figure figcaption p,
+  .slide figure figcaption a { 
     display: none;
   }
 
 }
+
 @media screen and (max-width: 768px) {  
   
   .slide figure figcaption a { 
@@ -134,6 +144,16 @@ img {
   .slide figure figcaption {
     margin: auto;
     width: 1170px;
+  }
+  #w {
+    height: 450px;
+  }
+  .slider { 
+    height: 450px;
+  }
+  .slide figure figcaption h2 {
+    font-size: 24px;
+    width: 100%;
   }
 
 }

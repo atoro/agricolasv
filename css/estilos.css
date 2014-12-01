@@ -3,16 +3,16 @@
     color: white;
 }
 ::-webkit-input-placeholder {
-color: #fff;
+	color: #fff;
 }
 :-moz-placeholder { /* Firefox 18- */
-color: #fff;
+	color: #fff;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-color: #fff; 
+	color: #fff; 
 }
 :-ms-input-placeholder { 
-color: #fff; 
+	color: #fff; 
 }
 body {
 	font-family: 'Raleway', sans-serif;

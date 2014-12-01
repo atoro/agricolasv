@@ -88,7 +88,7 @@
     }
     .contenido_nosotros .centro_nosotros .img_nosotros {
         display: inline-block;
-        width: 35%;
+        width: 34%;
         vertical-align: top;
     }
     .contenido_nosotros .centro_nosotros .img_nosotros img {
@@ -97,7 +97,7 @@
     .contenido_nosotros .centro_nosotros .texto { 
         display: inline-block;
         vertical-align: top;
-        width: 60%;
+        width: 61%;
         margin-left: 4%;
     }
     .destacados .centro_destacados .grid1 { 

@@ -29,7 +29,7 @@
         <li><a href="nosotros.php">Proyecto</a></li>
         <li><a href="noticias.php">Servicios</a></li>
         <li><a href="ubicacion.php">Destacados</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href=".contacto">Contacto</a></li>
       </ul>
     </nav>
   </div>
@@ -163,7 +163,7 @@
   <p>©2014 Todos los derechos reservados a AIT SV Ltda. / <a href="http://www.emagenic.cl" target="new">Desarrollado por emagenic.cl</a></p>  
 </footer>
 
-<!-- scripts -->
+<!-- script menu -->
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script>
   $(function() {
@@ -177,6 +177,8 @@
       })
   });
 </script>
+
+<!-- scrip slide -->
 <script type="text/javascript" src="js/jquery.glide.min.js"></script>
 <script type="text/javascript">
 $(function(){
@@ -186,6 +188,19 @@ $(function(){
     arrowRightText: '&rarr;',
     arrowLeftText: '&larr;'
   });
+});
+</script>
+
+<!-- script anclas-->
+<script type="text/javascript">
+$(function(){
+    $('ul li a').on('click',function(e){
+        e.preventDefault();
+        var strAncla=$(this).attr('href');
+        $('body,html').stop(true,true).animate({
+            scrollTop: $(strAncla).offset().top
+        },1000);
+    });
 });
 </script>
 </body>
