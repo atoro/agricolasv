@@ -152,7 +152,7 @@ body,td,th {
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/slide/Upload_foto.php?id=3" class="texto">Cambiar Imagen :</a> &nbsp;</p></td>
+        <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/slide/Upload_foto.php?id=4" class="texto">Cambiar Imagen :</a> &nbsp;</p></td>
         <td valign="top"><img src="../imagenes/slide/4.jpg" width="500" height="200"></td>
         <td>&nbsp;</td>
       </tr>

@@ -155,16 +155,14 @@ while($rs=mysql_fetch_array($sentencia,$mibase)){
                 <tr>
                   <td width="88%" valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
                     <tr>
-                      <td height="31" class="Letras1"><a href="../imagenes/nosotros/Upload_foto.php?id=<?php echo $rs["id"]; ?>" class="texto">Cambiar foto</a></td>
-                      <td class="Letras1"><div align="left" class="Letras1"> 
+                      <td width="2%" rowspan="5" class="Letras1">&nbsp;</td>
+                      <td height="31" class="Letras1"><div align="left" class="Letras1"> 
                       
 
                       <span class="textobox"><a href="nosotros.php?id=<?php echo $rs["id"] ?>&action=eliminar" onClick=" return confirm('Esta Seguro que desea eliminar?');"><img src="b_drop.png" width="16" height="16" border="0" /></a> &nbsp;</span><span class="texto">Eliminar</span></div></td>
                       <td class="textobox"><a href="javascript:openWindow('editarnosotros.php?id=<?php echo $rs["id"]; ?>')"javascript:openWindow('editarnosotros.php?id=<?php echo $rs["id"]; ?>')""><img src="Lapiz.png" width="16" height="16" border="0"></a>  &nbsp;<span class="texto">Editar</span><span class="textoinfo"></a></span></td>
                     </tr>
                     <tr>
-                      <td width="32%" rowspan="4" valign="top" class="Letras1">
-                      <img src="../imagenes/nosotros/<?php echo $rs["id"]; ?>.jpg" width="200" height="200"></td>
                       <td height="29" valign="top" class="Letras1"><div align="right" class="textoinfo"><span class="texto">Titulo :</span> &nbsp; </div></td>
                       <td valign="top">
 					  <span class="texto"><?php $texto = str_replace("\r\n","<br>",$rs["titulo_nosotros"]); echo $texto ?>
@@ -179,8 +177,8 @@ while($rs=mysql_fetch_array($sentencia,$mibase)){
                       <p class="texto">&nbsp; </p></td>
                     </tr>
                     <tr>
-                      <td width="14%" valign="top" class="Letras1">&nbsp;</td>
-                      <td width="54%" valign="top">&nbsp;</td>
+                      <td width="11%" valign="top" class="Letras1">&nbsp;</td>
+                      <td width="87%" valign="top">&nbsp;</td>
                     </tr>
                     <tr>
                       <td colspan="2" align="right" valign="top" class="Letras1">&nbsp;</td>

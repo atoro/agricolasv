@@ -98,8 +98,8 @@ body,td,th {
         <td width="6%">&nbsp;</td>
       </tr>
       <tr>
-        <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/inicio/Upload_foto.php?id=1" class="texto">Cambiar Imagen :</a> &nbsp;</p></td>
-        <td valign="top"><img src="../imagenes/inicio/1.jpg" width="370" height="175"></td>
+        <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/destacados/Upload_foto.php?id=1" class="texto">Cambiar Imagen :</a> &nbsp;</p></td>
+        <td valign="top"><img src="../imagenes/destacados/1.jpg" width="400" height="196"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
@@ -117,8 +117,8 @@ body,td,th {
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/inicio/Upload_foto.php?id=2" class="texto">Cambiar Imagen : </a>&nbsp;</p></td>
-        <td valign="top"><img src="../imagenes/inicio/2.jpg" width="370" height="175"></td>
+        <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/destacados/Upload_foto.php?id=2" class="texto">Cambiar Imagen : </a>&nbsp;</p></td>
+        <td valign="top"><img src="../imagenes/destacados/2.jpg" width="400" height="196"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
@@ -135,8 +135,8 @@ body,td,th {
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/inicio/Upload_foto.php?id=3" class="texto">Cambiar Imagen :</a> &nbsp;</p></td>
-        <td valign="top"><img src="../imagenes/inicio/3.jpg" width="370" height="175"></td>
+        <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/destacados/Upload_foto.php?id=3" class="texto">Cambiar Imagen :</a> &nbsp;</p></td>
+        <td valign="top"><img src="../imagenes/destacados/3.jpg" width="400" height="196"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>

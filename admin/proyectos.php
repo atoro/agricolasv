@@ -165,12 +165,12 @@ while($rs=mysql_fetch_array($sentencia,$mibase)){
                       <td class="Letras1"><div align="left" class="Letras1"> 
                       
 
-                      <span class="textobox"><a href="proyetos.php?id=<?php echo $rs["id"] ?>&action=eliminar" onClick=" return confirm('Esta Seguro que desea eliminar?');"><img src="b_drop.png" width="16" height="16" border="0" /></a> &nbsp;</span><span class="texto">Eliminar</span></div></td>
+                      <span class="textobox"><a href="proyectos.php?id=<?php echo $rs["id"] ?>&action=eliminar" onClick=" return confirm('Esta Seguro que desea eliminar?');"><img src="b_drop.png" width="16" height="16" border="0" /></a> &nbsp;</span><span class="texto">Eliminar</span></div></td>
                       <td class="textobox"><a href="javascript:openWindow('editarproyectos.php?id=<?php echo $rs["id"]; ?>')"javascript:openWindow('editarproyectos.php?id=<?php echo $rs["id"]; ?>')""><img src="Lapiz.png" width="16" height="16" border="0"></a>  &nbsp;<span class="texto">Editar</span><span class="textoinfo"></a></span></td>
                     </tr>
                     <tr>
                       <td width="32%" rowspan="4" valign="top" class="Letras1">
-                      <img src="../imagenes/proyectos/<?php echo $rs["id"]; ?>.jpg" width="200" height="200"></td>
+                      <img src="../imagenes/proyectos/<?php echo $rs["id"]; ?>.jpg" width="337" height="229"></td>
                       <td height="29" valign="top" class="Letras1"><div align="right" class="textoinfo"><span class="texto">Titulo :</span> &nbsp; </div></td>
                       <td valign="top">
 					  <span class="texto"><?php $texto = str_replace("\r\n","<br>",$rs["titulo_proyecto"]); echo $texto ?>

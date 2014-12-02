@@ -164,7 +164,7 @@ while($rs=mysql_fetch_array($sentencia,$mibase)){
                     </tr>
                     <tr>
                       <td width="32%" rowspan="4" valign="top" class="Letras1">
-                      <img src="../imagenes/servicios/<?php echo $rs["id"]; ?>.jpg" width="200" height="200"></td>
+                      <img src="../imagenes/servicios/<?php echo $rs["id"]; ?>.jpg" width="337" height="229"></td>
                       <td height="29" valign="top" class="Letras1"><div align="right" class="textoinfo"><span class="texto">Titulo :</span> &nbsp; </div></td>
                       <td valign="top">
 					  <span class="texto"><?php $texto = str_replace("\r\n","<br>",$rs["titulo_servicio"]); echo $texto ?>
