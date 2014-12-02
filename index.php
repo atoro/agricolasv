@@ -1,3 +1,45 @@
+<?php
+  include("Conexion.php");
+  $listado = "select * from pie";
+  $sentencia = mysql_query($listado,$conn);
+  while($rs=mysql_fetch_array($sentencia,$mibase)){
+    $texto_pie1 = str_replace("\r\n","<br>",$rs["texto_pie1"]); 
+    $texto_pie2 = str_replace("\r\n","<br>",$rs["texto_pie2"]); 
+  }
+
+  $listado = "select * from contacto";
+  $sentencia = mysql_query($listado,$conn);
+  while($rs=mysql_fetch_array($sentencia,$mibase)){
+    $titulo_contacto = str_replace("\r\n","<br>",$rs["titulo_contacto"]); 
+    $contenido_contacto = str_replace("\r\n","<br>",$rs["contenido_contacto"]); 
+  }
+
+  $listado = "select * from slide";
+  $sentencia = mysql_query($listado,$conn);
+  while($rs=mysql_fetch_array($sentencia,$mibase)){
+    $slide1 = str_replace("\r\n","<br>",$rs["slide1"]); 
+    $texto_slide1 = str_replace("\r\n","<br>",$rs["texto_slide1"]); 
+    $slide2 = str_replace("\r\n","<br>",$rs["slide2"]); 
+    $texto_slide2 = str_replace("\r\n","<br>",$rs["texto_slide2"]); 
+    $slide3 = str_replace("\r\n","<br>",$rs["slide3"]); 
+    $texto_slide3 = str_replace("\r\n","<br>",$rs["texto_slide3"]); 
+    $slide4 = str_replace("\r\n","<br>",$rs["slide4"]); 
+    $texto_slide4 = str_replace("\r\n","<br>",$rs["texto_slide4"]); 
+  }
+
+  $listado = "select * from inicio";
+  $sentencia = mysql_query($listado,$conn);
+  while($rs=mysql_fetch_array($sentencia,$mibase)){
+    $titulo_agricola = str_replace("\r\n","<br>",$rs["titulo_agricola"]); 
+    $contenido_agricola = str_replace("\r\n","<br>",$rs["contenido_agricola"]); 
+    $titulo_inmobiliaria = str_replace("\r\n","<br>",$rs["titulo_inmobiliaria"]); 
+    $contenido_inmobiliaria = str_replace("\r\n","<br>",$rs["contenido_inmobiliaria"]); 
+    $titulo_transporte = str_replace("\r\n","<br>",$rs["titulo_transporte"]); 
+    $contenido_transporte = str_replace("\r\n","<br>",$rs["contenido_transporte"]); 
+    
+  }
+
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -42,10 +84,8 @@
         <li class="slide">
           <figure>
             <figcaption>
-              <h2>LOREM IPSUM SIMPLY IS DUMMY</h2>
-              <p>Lorem Ipsum es simplemente el texto de relleno  de las imprentas y archivos
-              de texto. Lorem Ipsum  ha sido el texto de relleno estándar de las 
-              industrias desde el año 1500, cuando un impresor </p>
+              <h2><?php echo $slide1 ?></h2>
+              <p><?php echo $texto_slide1 ?></p>
               <a href="#">VER MAS</a>
             </figcaption>
             <img src="imagenes/slide/1.jpg">
@@ -54,10 +94,8 @@
         <li class="slide">
           <figure>
             <figcaption>
-              <h2>LOREM IPSUM SIMPLY IS DUMMY</h2>
-              <p>Lorem Ipsum es simplemente el texto de relleno  de las imprentas y archivos
-              de texto. Lorem Ipsum  ha sido el texto de relleno estándar de las 
-              industrias desde el año 1500, cuando un impresor </p>
+              <h2><?php echo $slide2 ?></h2>
+              <p><?php echo $texto_slide2 ?></p>
               <a href="#">VER MAS</a>
             </figcaption>
             <img src="imagenes/slide/2.jpg">
@@ -66,10 +104,8 @@
         <li class="slide">
           <figure>
             <figcaption>
-              <h2>LOREM IPSUM SIMPLY IS DUMMY</h2>
-              <p>Lorem Ipsum es simplemente el texto de relleno  de las imprentas y archivos
-              de texto. Lorem Ipsum  ha sido el texto de relleno estándar de las 
-              industrias desde el año 1500, cuando un impresor </p>
+              <h2><?php echo $slide3 ?></h2>
+              <p><?php echo $texto_slide3 ?></p>
               <a href="#">VER MAS</a>
             </figcaption>
             <img src="imagenes/slide/3.jpg">
@@ -78,10 +114,8 @@
         <li class="slide">
           <figure>
             <figcaption>
-              <h2>LOREM IPSUM SIMPLY IS DUMMY</h2>
-              <p>Lorem Ipsum es simplemente el texto de relleno  de las imprentas y archivos
-              de texto. Lorem Ipsum  ha sido el texto de relleno estándar de las 
-              industrias desde el año 1500, cuando un impresor </p>
+              <h2><?php echo $slide4 ?></h2>
+              <p><?php echo $texto_slide4 ?></p>
               <a href="#">VER MAS</a>
             </figcaption>
             <img src="imagenes/slide/4.jpg">
@@ -95,24 +129,24 @@
   <div class="centro_destacados">
     <div class="grid1">
       <div class="img_destacado">
-        <h2>Agricola</h2>
+        <h2><?php echo $titulo_agricola ?></h2>
         <img src="imagenes/destacados/1.jpg">
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum rem quidem doloremque, itaque culpa</p>
+      <p><?php echo $contenido_agricola ?></p>
     </div>
     <div class="grid2">
       <div class="img_destacado">
-        <h2>Inmobiliaria</h2>
+        <h2><?php echo $titulo_inmobiliaria ?></h2>
         <img src="imagenes/destacados/2.jpg">
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi mollitia delectus nemo, quidem id, non nobis</p> 
+      <p><?php echo $contenido_inmobiliaria ?></p> 
     </div>  
     <div class="grid3">
       <div class="img_destacado">
-        <h2>Transporte</h2>
+        <h2><?php echo $titulo_transporte ?></h2>
         <img src="imagenes/destacados/3.jpg">
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur recusandae ipsam iure voluptatem</p>
+      <p><?php echo $contenido_transporte ?></p>
     </div>
   </div>
 </section>
@@ -122,11 +156,16 @@
     <div class="img_nosotros">
       <img src="imagenes/nosotros/nosotros.jpg" alt="nosotros ait sv">
     </div>
+    <?php 
+      $listado = "select * from nosotros";
+      $sentencia = mysql_query($listado,$conn);
+      while($rs=mysql_fetch_array($sentencia,$mibase)){
+    ?>
     <div class="texto">
-      <h2>Nosotros Lorem Ipsum es simplemente</h2>
-      <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. <br>
-      <br>No sólo sobrevivió 500 años, sino que tambien ingresó como Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. </p>
+      <h2><?php $texto = str_replace("\r\n","<br>",$rs["titulo_nosotros"]); echo $texto ?></h2>
+      <p><?php $texto = str_replace("\r\n","<br>",$rs["contenido_nosotros"]); echo $texto ?></p>
     </div>
+    <?php } ?>
     <div class="mapa">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.503385901523!2d-70.74842109999997!3d-34.1846126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966343311dec2ebb%3A0xc59a3b26efd358e7!2sAv+Cachapoal+1135%2C+Rancagua%2C+O&#39;Higgins!5e0!3m2!1ses!2scl!4v1417275778175" width="100%" height="320" frameborder="0" style="border:0"></iframe>
     </div>
@@ -138,15 +177,12 @@
     <figure class="carta">
       <img src="imagenes/carta.png" alt="icono carta">
     </figure>
-    <h3>CONTÁCTANOS</h3>
+    <h3><?php echo $titulo_contacto ?></h3>
     <div class="texto_contacto">
-      <h4>CONTÁCTANOS</h4>
-      <p>Lorem Ipsum es simplemente el texto de relleno 
-      de las imprentas y archivos de texto. Lorem Ipsum 
-      ha sido el texto de relleno estándar de las 
-      industrias desde el año 1500, cuando un impresor</p>
+      <h4><?php echo $titulo_contacto ?></h4>
+      <p><?php echo $contenido_contacto ?></p>
     </div>
-    <form action="contacto.php" method="post" onSubmit="MM_validateForm('name','','R','message','','R');return document.MM_returnValue;return document.MM_returnValue">
+    <form action="index.php" method="post" onSubmit="MM_validateForm('name','','R','message','','R');return document.MM_returnValue;return document.MM_returnValue">
       <input class="input" name="Nombre" type="text" placeholder="Nombre"/>
       <input class="input" name="Mail" type="text" placeholder="E-mail"/>  
       <input class="input" name="Telefono" type="text" placeholder="Teléfono"/>
@@ -160,8 +196,8 @@
   <a class="social" href="#"><img src="imagenes/facebook.png" alt="icono facebook"></a>
   <a class="social" href="#"><img src="imagenes/youtube.png" alt="icono youtube"></a>
   <a class="social" href="#"><img src="imagenes/twitter.png" alt="icono twitter"></a>
-  <p>Av. Cachapoal Nº1135, Villa Reconquista, Rancagua</p>
-  <p>©2014 Todos los derechos reservados a AIT SV Ltda. / <a href="http://www.emagenic.cl" target="new">Desarrollado por emagenic.cl</a></p>  
+  <p><?php echo $texto_pie1 ?></p>
+  <p><?php echo $texto_pie2 ?> / <a href="http://www.emagenic.cl" target="new">Desarrollado por emagenic.cl</a></p>  
 </footer>
 
 <!-- script menu -->
@@ -191,7 +227,6 @@ $(function(){
   });
 });
 </script>
-
 
 <!-- scrip ancla -->
 <script type="text/javascript">
@@ -225,3 +260,27 @@ $(function(){
 
 </body>
 </html>
+<?php
+  if ($_POST["Enviar"]){
+    $destinatario = "atoro@emagenic.cl"; // correo de destino //
+    $nombre = $_POST["Nombre"];
+    $telefono = $_POST["Telefono"];
+    $mail = $_POST["Mail"];
+    $mensaje = $_POST["Mensaje"];
+    $asunto = "Consulta sitio web"; 
+    $cuerpo = "
+    <table width=100% border=0 cellspacing=0 cellpadding=0>
+      <tr><td><strong>NOMBRE:</strong> $nombre</td></tr>
+      <tr><td><strong>TELEFONO:</strong> $telefono</td></tr>
+      <tr><td><strong>MAIL:</strong> $mail</td></tr>
+      <tr><td><strong>CONSULTA:</strong> $mensaje</td></tr>
+    </table>";
+    $headers = "MIME-Version: 1.0\r\n"; 
+    $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+    $headers .= "From: $nombre <$mail>\r\n"; 
+    mail($destinatario,$asunto,$cuerpo,$headers);
+    echo "<script> alert('Su consulta fue enviada correctamente'); </script>";
+    
+    
+  }
+?>
