@@ -78,6 +78,9 @@ body,td,th {
     <table width="45%" border="0" align="center" cellpadding="0" cellspacing="0">
       
       <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+      <tr>
         <td colspan="3"><div align="center" class="titulos"><strong>Pie</strong></div></td>
       </tr>
       <tr>

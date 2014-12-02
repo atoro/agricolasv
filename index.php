@@ -156,16 +156,16 @@
     <div class="img_nosotros">
       <img src="imagenes/nosotros/nosotros.jpg" alt="nosotros ait sv">
     </div>
-    <?php 
-      $listado = "select * from nosotros";
-      $sentencia = mysql_query($listado,$conn);
-      while($rs=mysql_fetch_array($sentencia,$mibase)){
-    ?>
     <div class="texto">
+      <?php 
+        $listado = "select * from nosotros";
+        $sentencia = mysql_query($listado,$conn);
+        while($rs=mysql_fetch_array($sentencia,$mibase)){
+      ?>
       <h2><?php $texto = str_replace("\r\n","<br>",$rs["titulo_nosotros"]); echo $texto ?></h2>
       <p><?php $texto = str_replace("\r\n","<br>",$rs["contenido_nosotros"]); echo $texto ?></p>
+      <?php } ?>
     </div>
-    <?php } ?>
     <div class="mapa">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.503385901523!2d-70.74842109999997!3d-34.1846126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966343311dec2ebb%3A0xc59a3b26efd358e7!2sAv+Cachapoal+1135%2C+Rancagua%2C+O&#39;Higgins!5e0!3m2!1ses!2scl!4v1417275778175" width="100%" height="320" frameborder="0" style="border:0"></iframe>
     </div>

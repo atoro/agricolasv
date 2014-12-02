@@ -115,6 +115,9 @@ if ($_POST["Grabar"]){
 <form action="nosotros.php" method="post" name="form1" id="form1" onSubmit="MM_validateForm('codigo','','R','nombre','','R','preciolista','','RisNum','preciomayorista','','RisNum','descripcion','','R');return document.MM_returnValue">
   <table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
+        <td height="18" colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
         <td height="38" colspan="2"><div align="center" class="titulos"><strong>Nosotros</strong></div></td>
       </tr>
       <tr>

@@ -115,6 +115,9 @@ if ($_POST["Grabar"]){
 <form action="proyetos.php" method="post" name="form1" id="form1" onSubmit="MM_validateForm('codigo','','R','nombre','','R','preciolista','','RisNum','preciomayorista','','RisNum','descripcion','','R');return document.MM_returnValue">
   <table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
+        <td height="18" colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
         <td height="38" colspan="2"><div align="center" class="titulos"><strong>Proyectos</strong></div></td>
       </tr>
       <tr>
@@ -200,7 +203,7 @@ while($rs=mysql_fetch_array($sentencia,$mibase)){
                       <td height="43" colspan="3" align="center" valign="middle" bgcolor="#414141" class="Letras1">
                       
                       
-                      <p class="titulos2"><a href="galeria.php?propiedad=<?php echo $rs["id"]; ?>" class="titulos2">Galería Proyecto</a></p>
+                      <p class="titulos2"><a href="galeria.php?propiedad=<?php echo $rs["id"]; ?>" class="titulos2">Agregar Galería</a></p>
                       </td>
                     </tr>
                   </table></td>

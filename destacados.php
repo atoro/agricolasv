@@ -94,7 +94,7 @@
       <div class="texto">
         <h2><?php $texto = str_replace("\r\n","<br>",$rs["titulo_noticia"]); echo $texto ?></h2>
         <p><?php $texto = str_replace("\r\n","<br>",$rs["breve_noticia"]); echo $texto ?></p>
-        <a href="detalledestacado.php?id=<?php echo $rs["id"]; ?>">VER MAS</a>
+        <a class="a" href="detalledestacado.php?id=<?php echo $rs["id"]; ?>">VER MAS</a>
       </div>
     </article>
     <?php } ?>

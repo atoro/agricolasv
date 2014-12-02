@@ -115,6 +115,9 @@ if ($_POST["Grabar"]){
 <form action="noticias.php" method="post" name="form1" id="form1" onSubmit="MM_validateForm('codigo','','R','nombre','','R','preciolista','','RisNum','preciomayorista','','RisNum','descripcion','','R');return document.MM_returnValue">
   <table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
+        <td height="18" colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
         <td height="38" colspan="2"><div align="center" class="titulos"><strong>Destacados</strong></div></td>
       </tr>
       <tr>
@@ -161,7 +164,7 @@ while($rs=mysql_fetch_array($sentencia,$mibase)){
                 <tr>
                   <td width="88%" valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
                     <tr>
-                      <td height="31" class="Letras1"><a href="../imagenes/noticias/Upload_foto.php?id=<?php echo $rs["id"]; ?>" class="texto">Cambiar foto</a></td>
+                      <td height="31" class="Letras1"><a href="../imagenes/destacados2/Upload_foto.php?id=<?php echo $rs["id"]; ?>" class="texto">Cambiar foto</a></td>
                       <td class="Letras1"><div align="left" class="Letras1"> 
                       
 
