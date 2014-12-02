@@ -1,3 +1,20 @@
+<?php
+  include("Conexion.php");
+  $listado = "select * from pie";
+  $sentencia = mysql_query($listado,$conn);
+  while($rs=mysql_fetch_array($sentencia,$mibase)){
+    $texto_pie1 = str_replace("\r\n","<br>",$rs["texto_pie1"]); 
+    $texto_pie2 = str_replace("\r\n","<br>",$rs["texto_pie2"]); 
+  }
+
+  $listado = "select * from contacto";
+  $sentencia = mysql_query($listado,$conn);
+  while($rs=mysql_fetch_array($sentencia,$mibase)){
+    $titulo_contacto = str_replace("\r\n","<br>",$rs["titulo_contacto"]); 
+    $contenido_contacto = str_replace("\r\n","<br>",$rs["contenido_contacto"]); 
+  }
+
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -65,39 +82,22 @@
 
 <section class="contenido_nosotros">
   <div class="centro_nosotros">
+    <?php 
+      $listado = "select * from noticias";
+      $sentencia = mysql_query($listado,$conn);
+      while($rs=mysql_fetch_array($sentencia,$mibase)){
+    ?>
     <article>
       <div class="img_nosotros2">
-        <img src="imagenes/destacados2/1.jpg" alt="proyectos ait sv">
+        <img src="imagenes/destacados2/<?php echo $rs["id"]; ?>.jpg">
       </div>
       <div class="texto">
-        <h2>Destacado 1</h2>
-        <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. <br>
-        <br>No sólo sobrevivió 500 años, sino que tambien ingresó como Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. </p>
-        <a href="detalledestacado.php">VER MAS</a>
+        <h2><?php $texto = str_replace("\r\n","<br>",$rs["titulo_noticia"]); echo $texto ?></h2>
+        <p><?php $texto = str_replace("\r\n","<br>",$rs["breve_noticia"]); echo $texto ?></p>
+        <a href="detalledestacado.php?id=<?php echo $rs["id"]; ?>">VER MAS</a>
       </div>
     </article>
-    <article>
-      <div class="img_nosotros2">
-        <img src="imagenes/destacados2/2.jpg" alt="proyectos ait sv">
-      </div>
-      <div class="texto">
-        <h2>Destacado 2</h2>
-        <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. <br>
-        <br>No sólo sobrevivió 500 años, sino que tambien ingresó como Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. </p>
-        <a href="detalledestacado.php">VER MAS</a>
-      </div>
-    </article>
-    <article>
-      <div class="img_nosotros2">
-        <img src="imagenes/destacados2/3.jpg" alt="proyectos ait sv">
-      </div>
-      <div class="texto">
-        <h2>Destacado 3</h2>
-        <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. <br>
-        <br>No sólo sobrevivió 500 años, sino que tambien ingresó como Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. </p>
-        <a href="detalledestacado.php">VER MAS</a>
-      </div>
-    </article>
+    <?php } ?>
   </div>
 </section>
 
@@ -106,15 +106,12 @@
     <figure class="carta">
       <img src="imagenes/carta.png" alt="icono carta">
     </figure>
-    <h3>CONTÁCTANOS</h3>
+    <h3><?php echo $titulo_contacto ?></h3>
     <div class="texto_contacto">
-      <h4>CONTÁCTANOS</h4>
-      <p>Lorem Ipsum es simplemente el texto de relleno 
-      de las imprentas y archivos de texto. Lorem Ipsum 
-      ha sido el texto de relleno estándar de las 
-      industrias desde el año 1500, cuando un impresor</p>
+      <h4><?php echo $titulo_contacto ?></h4>
+      <p><?php echo $contenido_contacto ?></p>
     </div>
-    <form action="contacto.php" method="post" onSubmit="MM_validateForm('name','','R','message','','R');return document.MM_returnValue;return document.MM_returnValue">
+    <form action="destacados.php" method="post" onSubmit="MM_validateForm('name','','R','message','','R');return document.MM_returnValue;return document.MM_returnValue">
       <input class="input" name="Nombre" type="text" placeholder="Nombre"/>
       <input class="input" name="Mail" type="text" placeholder="E-mail"/>  
       <input class="input" name="Telefono" type="text" placeholder="Teléfono"/>
@@ -128,8 +125,8 @@
   <a class="social" href="#"><img src="imagenes/facebook.png" alt="icono facebook"></a>
   <a class="social" href="#"><img src="imagenes/youtube.png" alt="icono youtube"></a>
   <a class="social" href="#"><img src="imagenes/twitter.png" alt="icono twitter"></a>
-  <p>Av. Cachapoal Nº1135, Villa Reconquista, Rancagua</p>
-  <p>©2014 Todos los derechos reservados a AIT SV Ltda. / <a href="http://www.emagenic.cl" target="new">Desarrollado por emagenic.cl</a></p>  
+  <p><?php echo $texto_pie1 ?></p>
+  <p><?php echo $texto_pie2 ?> / <a href="http://www.emagenic.cl" target="new">Desarrollado por emagenic.cl</a></p>  
 </footer>
 
 <!-- script menu -->
@@ -191,3 +188,27 @@ $(function(){
 </script> 
 </body>
 </html>
+<?php
+  if ($_POST["Enviar"]){
+    $destinatario = "atoro@emagenic.cl"; // correo de destino //
+    $nombre = $_POST["Nombre"];
+    $telefono = $_POST["Telefono"];
+    $mail = $_POST["Mail"];
+    $mensaje = $_POST["Mensaje"];
+    $asunto = "Consulta sitio web"; 
+    $cuerpo = "
+    <table width=100% border=0 cellspacing=0 cellpadding=0>
+      <tr><td><strong>NOMBRE:</strong> $nombre</td></tr>
+      <tr><td><strong>TELEFONO:</strong> $telefono</td></tr>
+      <tr><td><strong>MAIL:</strong> $mail</td></tr>
+      <tr><td><strong>CONSULTA:</strong> $mensaje</td></tr>
+    </table>";
+    $headers = "MIME-Version: 1.0\r\n"; 
+    $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+    $headers .= "From: $nombre <$mail>\r\n"; 
+    mail($destinatario,$asunto,$cuerpo,$headers);
+    echo "<script> alert('Su consulta fue enviada correctamente'); </script>";
+    
+    
+  }
+?>
