@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html">
-  <title>Proyectos AIT SV Ltda</title>
+  <title>Detalle Destacados AIT SV Ltda</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <meta name="Description" content="Texto que describe el contenido de la pagina">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -27,9 +27,9 @@
       <a href="#" class="nav-mobile" id="nav-mobile"></a>
       <ul>
         <li><a href="index.php">Inicio</a></li>
-        <li><a class="activo" href="proyectos.php">Proyectos</a></li>
+        <li><a href="proyectos.php">Proyectos</a></li>
         <li><a href="servicios.php">Servicios</a></li>
-        <li><a href="destacados.php">Destacados</a></li>
+        <li><a class="activo" href="destacados.php">Destacados</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -65,39 +65,14 @@
 
 <section class="contenido_nosotros">
   <div class="centro_nosotros">
-    <article>
       <div class="img_nosotros2">
-        <img src="imagenes/proyectos/1.jpg" alt="proyectos ait sv">
+        <img src="imagenes/destacados2/1.jpg" alt="destacados ait sv">
       </div>
       <div class="texto">
-        <h2>Proyecto Lomas de Chucauco</h2>
+        <h2>Destacado</h2>
         <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. <br>
         <br>No sólo sobrevivió 500 años, sino que tambien ingresó como Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. </p>
-        <a href="detalleproyecto.php">VER MAS</a>
       </div>
-    </article>
-    <article>
-      <div class="img_nosotros2">
-        <img src="imagenes/proyectos/2.jpg" alt="proyectos ait sv">
-      </div>
-      <div class="texto">
-        <h2>Proyecto Dos</h2>
-        <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. <br>
-        <br>No sólo sobrevivió 500 años, sino que tambien ingresó como Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. </p>
-        <a href="detalleproyecto.php">VER MAS</a>
-      </div>
-    </article>
-    <article>
-      <div class="img_nosotros2">
-        <img src="imagenes/proyectos/3.jpg" alt="proyectos ait sv">
-      </div>
-      <div class="texto">
-        <h2>Proyecto Tres</h2>
-        <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. <br>
-        <br>No sólo sobrevivió 500 años, sino que tambien ingresó como Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. </p>
-        <a href="detalleproyecto.php">VER MAS</a>
-      </div>
-    </article>
   </div>
 </section>
 

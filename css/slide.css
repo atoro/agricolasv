@@ -32,6 +32,26 @@ img {
   float: left;
   clear: none;
 }
+#w_seccion {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.slider_seccion {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.slides_seccion {
+  height: 100%;
+  overflow: hidden;
+}
+.slide_seccion {
+  height: 100%;
+  float: left;
+  clear: none;
+}
 .slide figure {
   display: block;
   position: relative;
@@ -49,6 +69,7 @@ img {
   font-weight: 500;
   text-align: left;
   width: 80%;
+  text-shadow: 0 1px 1px #000000;
 }
 .slide figure figcaption p {
   color: #fff;
@@ -58,6 +79,7 @@ img {
   text-align: left;
   text-decoration: none;
   width: 80%;
+  text-shadow: 0 1px 1px #000000;
 }
 .slide figure figcaption a {
   border: none;
@@ -111,6 +133,7 @@ img {
   .slide figure figcaption h2 {
     font-size: 20px;
     width: 100%;
+    text-shadow: 0 1px 1px #000000;
   }
 
 }
@@ -133,14 +156,26 @@ img {
   .slide figure figcaption h2 {
     font-size: 20px;
     width: 100%;
+    text-shadow: 0 1px 1px #000000;
   }
   .slide figure figcaption p {
     font-size: 14px;
     line-height: 21px;
     width: 100%;
+    text-shadow: 0 1px 1px #000000;
   }
 
 }
+@media screen and (min-width: 769px) { 
+  
+  #w_seccion {
+    height: 300px;
+  }
+  .slider_seccion { 
+    height: 300px;
+  }
+
+} 
 @media screen and (min-width: 1250px) { 
 
   .slide figure figcaption {
@@ -156,6 +191,13 @@ img {
   .slide figure figcaption h2 {
     font-size: 24px;
     width: 100%;
+    text-shadow: 0 1px 1px #000000;
+  }
+  #w_seccion {
+    height: 300px;
+  }
+  .slider_seccion { 
+    height: 300px;
   }
 
 }

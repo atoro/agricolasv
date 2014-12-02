@@ -74,6 +74,22 @@ header .centro_header .logo {
 	width: 80px;
 	display: block;
 }
+.contenido_nosotros .centro_nosotros article {
+	margin-bottom: 40px;
+}
+.contenido_nosotros .centro_nosotros .galeria {
+	background: white;
+	text-align: center;
+}
+.contenido_nosotros .centro_nosotros .galeria .img_galeria { 
+	width: 40%;
+	margin: 3%;
+	display: inline-block;
+	vertical-align: top;
+}
+.contenido_nosotros .centro_nosotros .galeria .img_galeria img { 
+	width: 100%;
+}
 .contenido_nosotros .centro_nosotros h2 {
 	font-size: 24px;
 	font-weight: 300;

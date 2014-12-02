@@ -86,6 +86,16 @@
         font-weight: 300;
         line-height: 23px;
     }
+    .contenido_nosotros .centro_nosotros .galeria {
+        background: white;
+        text-align: center;
+    }
+    .contenido_nosotros .centro_nosotros .galeria .img_galeria { 
+        width: 14%;
+        margin: 1%;
+        display: inline-block;
+        vertical-align: top;
+    }
     .contenido_nosotros .centro_nosotros .img_nosotros {
         display: inline-block;
         width: 34%;

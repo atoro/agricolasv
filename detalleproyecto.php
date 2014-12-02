@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html">
-  <title>Proyectos AIT SV Ltda</title>
+  <title>Detalle Proyecto AIT SV Ltda</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <meta name="Description" content="Texto que describe el contenido de la pagina">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -41,11 +41,6 @@
       <ul class="slides_seccion">
         <li class="slide">
           <figure>
-            <img src="imagenes/secciones/1.jpg">
-          </figure>
-        </li>
-        <li class="slide">
-          <figure>
             <img src="imagenes/secciones/2.jpg">
           </figure>
         </li>
@@ -59,13 +54,17 @@
             <img src="imagenes/secciones/4.jpg">
           </figure>
         </li>
+        <li class="slide">
+          <figure>
+            <img src="imagenes/secciones/1.jpg">
+          </figure>
+        </li>
       </ul>
     </div><!-- @end .slider -->
 </div><!-- @end #w -->
 
 <section class="contenido_nosotros">
   <div class="centro_nosotros">
-    <article>
       <div class="img_nosotros2">
         <img src="imagenes/proyectos/1.jpg" alt="proyectos ait sv">
       </div>
@@ -73,31 +72,30 @@
         <h2>Proyecto Lomas de Chucauco</h2>
         <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. <br>
         <br>No sólo sobrevivió 500 años, sino que tambien ingresó como Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. </p>
-        <a href="detalleproyecto.php">VER MAS</a>
       </div>
-    </article>
-    <article>
-      <div class="img_nosotros2">
-        <img src="imagenes/proyectos/2.jpg" alt="proyectos ait sv">
+      <div class="galeria">
+        <div class="img_galeria">
+          <img src="imagenes/galeria/1.jpg">
+        </div>
+        <div class="img_galeria">
+          <img src="imagenes/galeria/1.jpg">
+        </div>
+        <div class="img_galeria">
+          <img src="imagenes/galeria/1.jpg">
+        </div>
+        <div class="img_galeria">
+          <img src="imagenes/galeria/1.jpg">
+        </div>
+        <div class="img_galeria">
+          <img src="imagenes/galeria/1.jpg">
+        </div>
+        <div class="img_galeria">
+          <img src="imagenes/galeria/1.jpg">
+        </div>
       </div>
-      <div class="texto">
-        <h2>Proyecto Dos</h2>
-        <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. <br>
-        <br>No sólo sobrevivió 500 años, sino que tambien ingresó como Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. </p>
-        <a href="detalleproyecto.php">VER MAS</a>
+      <div class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.503385901523!2d-70.74842109999997!3d-34.1846126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966343311dec2ebb%3A0xc59a3b26efd358e7!2sAv+Cachapoal+1135%2C+Rancagua%2C+O&#39;Higgins!5e0!3m2!1ses!2scl!4v1417275778175" width="100%" height="320" frameborder="0" style="border:0"></iframe>
       </div>
-    </article>
-    <article>
-      <div class="img_nosotros2">
-        <img src="imagenes/proyectos/3.jpg" alt="proyectos ait sv">
-      </div>
-      <div class="texto">
-        <h2>Proyecto Tres</h2>
-        <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. <br>
-        <br>No sólo sobrevivió 500 años, sino que tambien ingresó como Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. </p>
-        <a href="detalleproyecto.php">VER MAS</a>
-      </div>
-    </article>
   </div>
 </section>
 
