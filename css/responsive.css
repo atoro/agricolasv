@@ -94,6 +94,14 @@
     .contenido_nosotros .centro_nosotros .img_nosotros img {
         width: 100%;
     }
+    .contenido_nosotros .centro_nosotros .img_nosotros2 {
+        display: inline-block;
+        width: 34%;
+        vertical-align: top;
+    }
+    .contenido_nosotros .centro_nosotros .img_nosotros2 img {
+        width: 100%;
+    }
     .contenido_nosotros .centro_nosotros .texto { 
         display: inline-block;
         vertical-align: top;

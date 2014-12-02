@@ -63,12 +63,30 @@ header .centro_header .logo {
 	padding: 40px 0;
 	margin: 0 auto;
 }
+.contenido_nosotros .centro_nosotros a {
+	border: none;
+	background: #d5ac1e;
+	color: white;
+	border-radius: 5px;
+	padding: 10px 5%;
+	text-decoration: none;
+	margin: 30px 0;
+	width: 80px;
+	display: block;
+}
 .contenido_nosotros .centro_nosotros h2 {
 	font-size: 24px;
 	font-weight: 300;
 }
 .contenido_nosotros .centro_nosotros .img_nosotros {
 	display: none;
+}
+.contenido_nosotros .centro_nosotros .img_nosotros2 {
+	display: block;
+	margin-bottom: 30px;
+}
+.contenido_nosotros .centro_nosotros .img_nosotros2 img {
+	width: 100%;
 }
 .contenido_nosotros .centro_nosotros .mapa {
 	border: solid 2px white;

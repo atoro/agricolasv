@@ -26,7 +26,6 @@ img {
 .slides {
   height: 100%;
   overflow: hidden;
-  
 }
 .slide {
   height: 100%;
@@ -104,6 +103,9 @@ img {
   display: none;
 }
 
+
+
+
 @media screen and (min-width: 300px) {  
   
   .slide figure figcaption h2 {
@@ -157,5 +159,7 @@ img {
   }
 
 }
+
+
 
 
