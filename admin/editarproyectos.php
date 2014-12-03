@@ -5,7 +5,7 @@ if ($_SESSION["$nusuario"] == "") {
 } else {
 include("../Conexion.php");
 if ($_POST["Modificar"]){
-	$insertar = "UPDATE proyectos SET titulo_proyecto ='".$_POST["titulo_proyecto"]."',breve_proyecto ='".$_POST["breve_proyecto"]."',completo_proyecto ='".$_POST["completo_proyecto"]."'   WHERE id  = '" .$_GET["id"]."' " ; 
+	$insertar = "UPDATE proyectos SET titulo_proyecto ='".$_POST["titulo_proyecto"]."',breve_proyecto ='".$_POST["breve_proyecto"]."',completo_proyecto ='".$_POST["completo_proyecto"]."',mapa ='".$_POST["mapa"]."'   WHERE id  = '" .$_GET["id"]."' " ; 
 	$sentencia=mysql_query($insertar,$conn)or die("Error al grabar : ".mysql_error);
 
 
@@ -55,6 +55,12 @@ while($rs=mysql_fetch_array($sentencia,$mibase)){
             <td height="95" valign="top" class="textobox"><div align="right" class="titulo"><span class="textos"><span class="texto">Completo</span>:&nbsp;</span></div></td>
             <td valign="top" class="Letras1"><span class="textobox">
               <textarea name="completo_proyecto" cols="40" rows="5" class="Letras1" id="contenido4"><?php echo $rs["completo_proyecto"]; ?></textarea>
+            </span></td>
+          </tr>
+          <tr>
+            <td height="95" valign="top" class="textobox"><div align="right" class="titulo"><span class="textos"><span class="texto">url mapa</span>:&nbsp;</span></div></td>
+            <td valign="top" class="Letras1"><span class="textobox">
+              <textarea name="mapa" cols="40" rows="5" class="Letras1" id="completo_proyecto"><?php echo $rs["mapa"]; ?></textarea>
             </span></td>
           </tr>
       </table></td>

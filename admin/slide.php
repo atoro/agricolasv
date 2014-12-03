@@ -5,7 +5,7 @@ if ($_SESSION["$nusuario"] == "") {
 } else {
 include("../Conexion.php");
 if ($_POST["Grabar"]){
-	$editar="update  slide set slide1  = '$_POST[slide1]',texto_slide1  = '$_POST[texto_slide1]',slide2  = '$_POST[slide2]',texto_slide2  = '$_POST[texto_slide2]',slide3  = '$_POST[slide3]',texto_slide3  = '$_POST[texto_slide3]',slide4  = '$_POST[slide4]',texto_slide4  = '$_POST[texto_slide4]'
+	$editar="update  slide set url1  = '$_POST[url1]',slide1  = '$_POST[slide1]',texto_slide1  = '$_POST[texto_slide1]',url2  = '$_POST[url2]',slide2  = '$_POST[slide2]',texto_slide2  = '$_POST[texto_slide2]',url3  = '$_POST[url3]',slide3  = '$_POST[slide3]',texto_slide3  = '$_POST[texto_slide3]',url4  = '$_POST[url4]',slide4  = '$_POST[slide4]',texto_slide4  = '$_POST[texto_slide4]'
 	";
 	$sentencia = mysql_query($editar,$conn)or die("Error al grabar: ".mysql_error);
 }
@@ -69,12 +69,16 @@ body,td,th {
 	$listado = "select * from slide";
 	$sentencia = mysql_query($listado,$conn);
 	while($rs=mysql_fetch_array($sentencia,$mibase)){
+		$url1 = $rs["url1"];
 		$slide1 = $rs["slide1"];
 		$texto_slide1 = $rs["texto_slide1"];
+		$url2 = $rs["url2"];
 		$slide2 = $rs["slide2"];
 		$texto_slide2 = $rs["texto_slide2"];
+		$url3 = $rs["url3"];
 		$slide3 = $rs["slide3"];
 		$texto_slide3 = $rs["texto_slide3"];
+		$url4 = $rs["url4"];
 		$slide4 = $rs["slide4"];
 		$texto_slide4 = $rs["texto_slide4"];
 	}
@@ -91,6 +95,11 @@ body,td,th {
       </tr>
       <tr>
         <td height="17" colspan="3"></td>
+      </tr>
+      <tr>
+        <td height="30" align="right" valign="top" class="texto">Url : &nbsp;</td>
+        <td valign="top"><input name="url1" type="text" class="textopreguntas" id="url1" value="<?php echo $url1; ?> " size="50"></td>
+        <td>&nbsp;</td>
       </tr>
       <tr>
         <td height="30" align="right" valign="top" class="texto"><p>Slide 1 : &nbsp;</p></td>
@@ -112,8 +121,13 @@ body,td,th {
         <td>&nbsp;</td>
       </tr>
       <tr>
+        <td height="30" align="right" valign="top" class="texto">Url : </td>
+        <td valign="top"><input name="url2" type="text" class="textopreguntas" id="titulo_tasaciones6" value="<?php echo $url2; ?> " size="50"></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
         <td height="30" align="right" valign="top" class="texto"><p>Slide 2 : &nbsp;</p></td>
-        <td valign="top"><input name="slide2" type="text" class="textopreguntas" id="titulo_tasaciones6" value="<?php echo $slide2; ?> " size="50"></td>
+        <td valign="top"><input name="slide2" type="text" class="textopreguntas" id="slide2" value="<?php echo $slide2; ?> " size="50"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
@@ -130,8 +144,13 @@ body,td,th {
         <td height="63" colspan="3">&nbsp;</td>
       </tr>
       <tr>
+        <td height="30" align="right" valign="top" class="texto">Url : &nbsp;</td>
+        <td valign="top"><input name="url3" type="text" class="textopreguntas" id="titulo_tasaciones2" value="<?php echo $url3; ?> " size="50"></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
         <td height="30" align="right" valign="top" class="texto"><p>Slide 3 : &nbsp;</p></td>
-        <td valign="top"><input name="slide3" type="text" class="textopreguntas" id="titulo_tasaciones2" value="<?php echo $slide3; ?> " size="50"></td>
+        <td valign="top"><input name="slide3" type="text" class="textopreguntas" id="slide" value="<?php echo $slide3; ?> " size="50"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
@@ -145,8 +164,13 @@ body,td,th {
         <td>&nbsp;</td>
       </tr>
       <tr>
+        <td height="30" align="right" valign="top" class="texto">Url : &nbsp;</td>
+        <td valign="top"><input name="url4" type="text" class="textopreguntas" id="titulo_tasaciones7" value="<?php echo $url4; ?> " size="50"></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
         <td height="30" align="right" valign="top" class="texto"><p>Slide 4 : &nbsp;</p></td>
-        <td valign="top"><input name="slide4" type="text" class="textopreguntas" id="titulo_tasaciones7" value="<?php echo $slide4; ?> " size="50"></td>
+        <td valign="top"><input name="slide4" type="text" class="textopreguntas" id="slide3" value="<?php echo $slide4; ?> " size="50"></td>
         <td>&nbsp;</td>
       </tr>
       <tr>

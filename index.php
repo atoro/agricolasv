@@ -17,12 +17,16 @@
   $listado = "select * from slide";
   $sentencia = mysql_query($listado,$conn);
   while($rs=mysql_fetch_array($sentencia,$mibase)){
+    $url1 = str_replace("\r\n","<br>",$rs["url1"]); 
     $slide1 = str_replace("\r\n","<br>",$rs["slide1"]); 
     $texto_slide1 = str_replace("\r\n","<br>",$rs["texto_slide1"]); 
+    $url2 = str_replace("\r\n","<br>",$rs["url2"]); 
     $slide2 = str_replace("\r\n","<br>",$rs["slide2"]); 
     $texto_slide2 = str_replace("\r\n","<br>",$rs["texto_slide2"]); 
+    $url3 = str_replace("\r\n","<br>",$rs["url3"]); 
     $slide3 = str_replace("\r\n","<br>",$rs["slide3"]); 
     $texto_slide3 = str_replace("\r\n","<br>",$rs["texto_slide3"]); 
+    $url4 = str_replace("\r\n","<br>",$rs["url4"]); 
     $slide4 = str_replace("\r\n","<br>",$rs["slide4"]); 
     $texto_slide4 = str_replace("\r\n","<br>",$rs["texto_slide4"]); 
   }
@@ -86,7 +90,7 @@
             <figcaption>
               <h2><?php echo $slide1 ?></h2>
               <p><?php echo $texto_slide1 ?></p>
-              <a href="#">VER MAS</a>
+              <a href="<?php echo $url1 ?>">VER MAS</a>
             </figcaption>
             <img src="imagenes/slide/1.jpg">
           </figure>
@@ -96,7 +100,7 @@
             <figcaption>
               <h2><?php echo $slide2 ?></h2>
               <p><?php echo $texto_slide2 ?></p>
-              <a href="#">VER MAS</a>
+              <a href="<?php echo $url2 ?>">VER MAS</a>
             </figcaption>
             <img src="imagenes/slide/2.jpg">
           </figure>
@@ -106,7 +110,7 @@
             <figcaption>
               <h2><?php echo $slide3 ?></h2>
               <p><?php echo $texto_slide3 ?></p>
-              <a href="#">VER MAS</a>
+              <a href="<?php echo $url3 ?>">VER MAS</a>
             </figcaption>
             <img src="imagenes/slide/3.jpg">
           </figure>
@@ -116,7 +120,7 @@
             <figcaption>
               <h2><?php echo $slide4 ?></h2>
               <p><?php echo $texto_slide4 ?></p>
-              <a href="#">VER MAS</a>
+              <a href="<?php echo $url4 ?>">VER MAS</a>
             </figcaption>
             <img src="imagenes/slide/4.jpg">
           </figure>

@@ -103,8 +103,8 @@ body,td,th {
     <?php 
 if ($_POST["Grabar"]){
 	
-		$insertar="INSERT INTO proyetos (titulo_proyecto,breve_proyecto,completo_proyecto ) ";
-		$insertar.= "VALUES( '$_POST[titulo_proyecto]','$_POST[breve_proyecto]','$_POST[completo_proyecto]')";
+		$insertar="INSERT INTO proyetos (titulo_proyecto,breve_proyecto,completo_proyecto,mapa ) ";
+		$insertar.= "VALUES( '$_POST[titulo_proyecto]','$_POST[breve_proyecto]','$_POST[completo_proyecto]','$_POST[mapa]')";
 		$sentencia=mysql_query($insertar,$conn)or die("Error al grabar: ".mysql_error);
 	
 }
@@ -135,6 +135,12 @@ if ($_POST["Grabar"]){
         <td height="92" align="right" valign="top" class="Letras1"><span class="titulos">Contenido Completo :</span><span class="texto"><strong> &nbsp; </strong></span></td>
         <td><span class="textobox">
           <textarea name="completo_proyecto" cols="45" rows="5" class="Letras1" id="completo_proyecto"></textarea>
+        </span></td>
+      </tr>
+      <tr>
+        <td height="92" align="right" valign="top" class="Letras1"><span class="titulos">Url Mapa  :</span><span class="texto"><strong> &nbsp; </strong></span></td>
+        <td><span class="textobox">
+          <textarea name="mapa" cols="45" rows="5" class="Letras1" id="mapa"></textarea>
         </span></td>
       </tr>
       <tr>
@@ -172,7 +178,7 @@ while($rs=mysql_fetch_array($sentencia,$mibase)){
                       <td class="textobox"><a href="javascript:openWindow('editarproyectos.php?id=<?php echo $rs["id"]; ?>')"javascript:openWindow('editarproyectos.php?id=<?php echo $rs["id"]; ?>')""><img src="Lapiz.png" width="16" height="16" border="0"></a>  &nbsp;<span class="texto">Editar</span><span class="textoinfo"></a></span></td>
                     </tr>
                     <tr>
-                      <td width="32%" rowspan="4" valign="top" class="Letras1">
+                      <td width="32%" rowspan="5" valign="top" class="Letras1">
                       <img src="../imagenes/proyectos/<?php echo $rs["id"]; ?>.jpg" width="337" height="229"></td>
                       <td height="29" valign="top" class="Letras1"><div align="right" class="textoinfo"><span class="texto">Titulo :</span> &nbsp; </div></td>
                       <td valign="top">
@@ -188,9 +194,16 @@ while($rs=mysql_fetch_array($sentencia,$mibase)){
                       <p class="texto">&nbsp; </p></td>
                     </tr>
                     <tr>
-                      <td width="14%" valign="top" class="Letras1"><div align="right" class="textoinfo"><span class="texto">Contenido Completo :</span> &nbsp;</div></td>
-                      <td width="54%" valign="top"><span class="texto">
+                      <td align="right" valign="top" class="Letras1"><span class="textoinfo"><span class="texto">Contenido Completo : &nbsp; </span></span></td>
+                      <td valign="top"><p class="texto">
                         <?php $texto = str_replace("\r\n","<br>",$rs["completo_proyecto"]); echo $texto ?>
+                      </p>
+                      <p class="texto">&nbsp;</p></td>
+                    </tr>
+                    <tr>
+                      <td width="14%" valign="top" class="Letras1"><div align="right" class="textoinfo"><span class="texto">Url Mapa: &nbsp; </span>&nbsp;</div></td>
+                      <td width="54%" valign="top"><span class="texto">
+                        <?php $texto = str_replace("\r\n","<br>",$rs["mapa"]); echo $texto ?>
                       </span></td>
                     </tr>
                     <tr>
