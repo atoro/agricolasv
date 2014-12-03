@@ -5,7 +5,7 @@ if ($_SESSION["$nusuario"] == "") {
 } else {
 include("../Conexion.php");
 if ($_POST["Grabar"]){
-	$editar="update  inicio set titulo_agricola  = '$_POST[titulo_agricola]',contenido_agricola  = '$_POST[contenido_agricola]',titulo_inmobiliaria  = '$_POST[titulo_inmobiliaria]',contenido_inmobiliaria  = '$_POST[contenido_inmobiliaria]',titulo_transporte  = '$_POST[titulo_transporte]',contenido_transporte  = '$_POST[contenido_transporte]'
+	$editar="update  inicio set titulo_agricola  = '$_POST[titulo_agricola]',contenido_agricola  = '$_POST[contenido_agricola]',titulo_inmobiliaria  = '$_POST[titulo_inmobiliaria]',contenido_inmobiliaria  = '$_POST[contenido_inmobiliaria]',titulo_transporte  = '$_POST[titulo_transporte]',contenido_transporte  = '$_POST[contenido_transporte]',mapa  = '$_POST[mapa]'
 	";
 	$sentencia = mysql_query($editar,$conn)or die("Error al grabar: ".mysql_error);
 }
@@ -75,6 +75,7 @@ body,td,th {
 		$contenido_inmobiliaria = $rs["contenido_inmobiliaria"];
 		$titulo_transporte = $rs["titulo_transporte"];
 		$contenido_transporte = $rs["contenido_transporte"];
+		$mapa = $rs["mapa"];
 	}
 	?>
   <form action="inicio.php" method="post" name="form1" id="form1">
@@ -148,8 +149,13 @@ body,td,th {
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td height="94" align="right" valign="top" class="texto"><p><a href="../imagenes/nosotros/Upload_foto.php?id=nosotros" class="texto">Cambiar Imagen Nosotros: </a>&nbsp;</p></td>
+        <td height="307" align="right" valign="top" class="texto"><a href="../imagenes/nosotros/Upload_foto.php?id=nosotros" class="texto">Cambiar Imagen Nosotros: </a></td>
         <td valign="top"><img src="../imagenes/nosotros/nosotros.jpg" width="405" height="275"></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="94" align="right" valign="top" class="texto"><p>Mapa : </p></td>
+        <td valign="top"><textarea name="mapa" cols="50" rows="4" class="textopreguntas" id="contenido_transporte"><?php echo $mapa; ?> </textarea></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
